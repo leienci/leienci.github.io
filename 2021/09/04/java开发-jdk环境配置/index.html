@@ -45,7 +45,7 @@
         content="2021-09-04">
       <meta 
         property="og:article:modified_time" 
-        content="2022-03-20">
+        content="2022-03-21">
       <meta 
         property="og:article:author" 
         content="Enci Lei">
@@ -317,7 +317,7 @@
     
     
       <span class="dot"></span>
-      <span>159 字</span>
+      <span>165 字</span>
     
   </div>
   
@@ -328,26 +328,30 @@
     <p>（一）JDK的安装</p>
 <p>演示的版本为jdk-8u201-windows-x64，安装的系统为Windows10版本1909。</p>
 <p>安装过程默认下一步即可</p>
-<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://blog.leienci.site/wp-content/uploads/2021/09/image-9.png" class="lozad post-image"src="https://blog.leienci.site/wp-content/uploads/2021/09/image-9.png"></p>
+<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-9.png" class="lozad post-image"src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-9.png"></p>
 <p>（二）PATH配置</p>
 <p>1.关闭JAVA自动检查更新</p>
-<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://blog.leienci.site/wp-content/uploads/2021/09/image-8.png" class="lozad post-image"src="https://blog.leienci.site/wp-content/uploads/2021/09/image-8.png"></p>
+<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-8.png" class="lozad post-image"src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-8.png"></p>
 <p>2.验证JDK安装是否成功</p>
-<p>java -version &#x2F;&#x2F;查询java版本</p>
-<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://blog.leienci.site/wp-content/uploads/2021/09/image-10.png" class="lozad post-image"src="https://blog.leienci.site/wp-content/uploads/2021/09/image-10.png"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token operator">&amp;</span> java -version <span class="token comment">#查询java版本</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-10.png" class="lozad post-image"src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-10.png"></p>
 <p>3.设置环境变量</p>
 <p>控制面板\系统和安全\系统-高级系统设置</p>
-<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://blog.leienci.site/wp-content/uploads/2021/09/image-11-1024x604.png" class="lozad post-image"src="https://blog.leienci.site/wp-content/uploads/2021/09/image-11-1024x604.png"></p>
+<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-11-1024x604.png" class="lozad post-image"src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-11-1024x604.png"></p>
 <p>4.新建系统变量</p>
-<p>变量名：JAVA_HOME<br>变量值：C:\Program Files\Java\jdk1.8.0_201<br>变量名：CLASSPATH<br>变量值：.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</p>
-<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://blog.leienci.site/wp-content/uploads/2021/09/image-13.png" class="lozad post-image"src="https://blog.leienci.site/wp-content/uploads/2021/09/image-13.png"></p>
-<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://blog.leienci.site/wp-content/uploads/2021/09/image-12.png" class="lozad post-image"src="https://blog.leienci.site/wp-content/uploads/2021/09/image-12.png"></p>
+<p>变量名：<code>JAVA\_HOME</code><br>变量值：<code>C:\\Program Files\\Java\\jdk1.8.0\_201</code><br>变量名：<code>CLASSPATH</code><br>变量值：<code>.;%JAVA\_HOME%\\lib\\dt.jar;%JAVA\_HOME%\\lib\\tools.jar;</code></p>
+<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-13.png" class="lozad post-image"src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-13.png"></p>
+<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-12.png" class="lozad post-image"src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-12.png"></p>
 <p>5.添加环境变量</p>
-<p>%JAVA_HOME%\bin<br>%JAVA_HOME%\jre\bin</p>
-<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://blog.leienci.site/wp-content/uploads/2021/09/image-14.png" class="lozad post-image"src="https://blog.leienci.site/wp-content/uploads/2021/09/image-14.png"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">%JAVA<span class="token punctuation">\</span>_HOME%<span class="token punctuation">\</span><span class="token punctuation">\</span>bin
+%JAVA<span class="token punctuation">\</span>_HOME%<span class="token punctuation">\</span><span class="token punctuation">\</span>jre<span class="token punctuation">\</span><span class="token punctuation">\</span>bin<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-14.png" class="lozad post-image"src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-14.png"></p>
 <p>6.验证配置</p>
-<p>javac</p>
-<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://blog.leienci.site/wp-content/uploads/2021/09/image-15.png" class="lozad post-image"src="https://blog.leienci.site/wp-content/uploads/2021/09/image-15.png"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token operator">&amp;</span> javac<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-15.png" class="lozad post-image"src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-15.png"></p>
 <p>参考资料：<a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/windows10-java-setup.html">https://www.runoob.com/w3cnote/windows10-java-setup.html</a></p>
 
   </div>

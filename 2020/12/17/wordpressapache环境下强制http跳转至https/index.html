@@ -317,7 +317,7 @@
     
     
       <span class="dot"></span>
-      <span>213 字</span>
+      <span>214 字</span>
     
   </div>
   
@@ -325,16 +325,22 @@
   <div 
     id="section" 
     class="post-content">
-    <p>修改网站根目录下的.htaccess文件（修改前先建立一个备份） .htaccess路径：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ /home/www/htdocs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+    <ul>
+<li>修改网站根目录下的.htaccess文件（修改前先建立一个备份）</li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ /home/www/htdocs <span class="token comment"># .htaccess的路径</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>在文件末尾添加以下代码即可 .htaccess为隐藏文件</p>
+<p> .htaccess为隐藏文件</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">ls</span> -a <span class="token comment">#显示当前目录下的所有文件及文件夹</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
+<ul>
+<li>在文件末尾添加以下代码即可</li>
+</ul>
 <pre class="line-numbers language-htaccess" data-language="htaccess"><code class="language-htaccess">RewriteEngine on  #开启重定向       
 RewriteBase &#x2F;             
 RewriteCond %&#123;SERVER_PORT&#125; !^443$
-RewriteRule ^.*$ https:&#x2F;&#x2F;%&#123;SERVER_NAME&#125;%&#123;REQUEST_URI&#125; [L,R]   #填写你的域名<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+RewriteRule ^.*$ https:&#x2F;&#x2F;%&#123;SERVER_NAME&#125;%&#123;REQUEST_URI&#125; [L,R]   
+#填写你的域名<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>Example</li>

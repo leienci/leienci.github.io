@@ -317,7 +317,7 @@
     
     
       <span class="dot"></span>
-      <span>397 字</span>
+      <span>369 字</span>
     
   </div>
   
@@ -325,8 +325,7 @@
   <div 
     id="section" 
     class="post-content">
-    <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token operator">/</span>\<span class="token operator">*</span>三位数反转（<span class="token number">1</span>）\<span class="token operator">*</span><span class="token operator">/</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+    <h3 id="三位数反转（1）"><a href="#三位数反转（1）" class="headerlink" title="三位数反转（1）"></a>三位数反转（1）</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
     <span class="token keyword">int</span> n<span class="token punctuation">;</span>
@@ -334,27 +333,12 @@
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d%d%d\\n"</span><span class="token punctuation">,</span> n <span class="token operator">%</span> <span class="token number">10</span><span class="token punctuation">,</span> n <span class="token operator">/</span> <span class="token number">10</span> <span class="token operator">%</span> <span class="token number">10</span><span class="token punctuation">,</span> n <span class="token operator">/</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
-<span class="token operator">/</span>\<span class="token operator">*</span>
-<span class="token number">127</span>
-<span class="token number">721</span>
-\<span class="token operator">*</span><span class="token operator">/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">&#x2F;\*三位数反转（1）\*&#x2F;
-#include &lt;stdio.h&gt;
-int main()
-&#123;
-    int n;
-    scanf(&quot;%d&quot;, &amp;n);
-    printf(&quot;%d%d%d\\n&quot;, n % 10, n &#x2F; 10 % 10, n &#x2F; 100);
-    return 0;
-&#125;
-&#x2F;\*
+<span class="token comment">/*
 127
 721
-\*&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token operator">/</span>\<span class="token operator">*</span>三位数反转（<span class="token number">2</span>）\<span class="token operator">*</span><span class="token operator">/</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<h3 id="三位数反转（2）"><a href="#三位数反转（2）" class="headerlink" title="三位数反转（2）"></a>三位数反转（2）</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
     <span class="token keyword">int</span> n<span class="token punctuation">,</span> m<span class="token punctuation">;</span>
@@ -364,13 +348,12 @@ int main()
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%03d"</span><span class="token punctuation">,</span> m<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
-<span class="token operator">/</span>\<span class="token operator">*</span>
-<span class="token number">520</span>
-<span class="token number">025</span> or <span class="token number">25</span>
-\<span class="token operator">*</span><span class="token operator">/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">/*
+520
+025 or 25
+*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token operator">/</span>\<span class="token operator">*</span>鸡兔同笼\<span class="token operator">*</span><span class="token operator">/</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<h3 id="鸡兔同笼"><a href="#鸡兔同笼" class="headerlink" title="鸡兔同笼"></a>鸡兔同笼</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
     <span class="token keyword">int</span> a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> n<span class="token punctuation">,</span> m<span class="token punctuation">;</span>
@@ -383,52 +366,50 @@ int main()
         <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d %d"</span><span class="token punctuation">,</span> a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
-<span class="token operator">/</span>\<span class="token operator">*</span>
+<span class="token comment">/*
 设鸡有a只，兔有b只
-a<span class="token operator">+</span>b<span class="token operator">=</span>n，<span class="token number">2</span>a<span class="token operator">+</span><span class="token number">4</span>b<span class="token operator">=</span>m
-\<span class="token operator">*</span><span class="token operator">/</span>
+a+b=n，2a+4b=m
+*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<span class="token operator">/</span>\<span class="token operator">*</span>三整数排序\<span class="token operator">*</span><span class="token operator">/</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token keyword">int</span> a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">,</span> t<span class="token punctuation">;</span>
-    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d %d %d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>a<span class="token punctuation">,</span> <span class="token operator">&amp;</span>b<span class="token punctuation">,</span> <span class="token operator">&amp;</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">></span> b<span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        t <span class="token operator">=</span> a<span class="token punctuation">;</span>
-        a <span class="token operator">=</span> b<span class="token punctuation">;</span>
-        b <span class="token operator">=</span> t<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">></span> c<span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
+<h3 id="三整数排序"><a href="#三整数排序" class="headerlink" title="三整数排序"></a>三整数排序</h3><pre class="line-numbers language-C" data-language="C"><code class="language-C">#include &lt;stdio.h&gt;
+int main()
+&#123;
+    int a, b, c, t;
+    scanf(&quot;%d %d %d&quot;, &amp;a, &amp;b, &amp;c);
+    if (a &gt; b)
+    &#123;
+        t &#x3D; a;
+        a &#x3D; b;
+        b &#x3D; t;
+    &#125;
+    if (a &gt; c)
+    &#123;
 
-        t <span class="token operator">=</span> a<span class="token punctuation">;</span>
-        a <span class="token operator">=</span> c<span class="token punctuation">;</span>
-        c <span class="token operator">=</span> t<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>b <span class="token operator">></span> c<span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        t <span class="token operator">=</span> b<span class="token punctuation">;</span>
-        b <span class="token operator">=</span> c<span class="token punctuation">;</span>
-        c <span class="token operator">=</span> t<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d %d %d"</span><span class="token punctuation">,</span> a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    t &#x3D; a;
+    a &#x3D; c;
+    c &#x3D; t;
+&#125;
+if (b &gt; c)
+&#123;
+    t &#x3D; b;
+    b &#x3D; c;
+    c &#x3D; t;
+&#125;
+printf(&quot;%d %d %d&quot;, a, b, c);
+return 0;
 
-<span class="token punctuation">&#125;</span>
-<span class="token operator">/</span>\<span class="token operator">*</span>
-<span class="token number">3</span> <span class="token number">1</span> <span class="token number">2</span>
-<span class="token number">1</span> <span class="token number">3</span> <span class="token number">2</span>
-<span class="token number">1</span> <span class="token number">2</span> <span class="token number">3</span>
+&#125;
+&#x2F;*
+3 1 2
+1 3 2
+1 2 3
 
-<span class="token number">2</span> <span class="token number">3</span> <span class="token number">1</span>
-<span class="token number">1</span> <span class="token number">3</span> <span class="token number">2</span>
-<span class="token number">1</span> <span class="token number">2</span> <span class="token number">3</span>
-\<span class="token operator">*</span><span class="token operator">/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+2 3 1
+1 3 2
+1 2 3
+*&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token operator">/</span>\<span class="token operator">*</span>平均数\<span class="token operator">*</span><span class="token operator">/</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<h3 id="平均数"><a href="#平均数" class="headerlink" title="平均数"></a>平均数</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
     <span class="token keyword">int</span> a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">;</span>
@@ -438,13 +419,12 @@ a<span class="token operator">+</span>b<span class="token operator">=</span>n，
     <span class="token comment">//(double)转换成双精度运算</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
-<span class="token operator">/</span>\<span class="token operator">*</span>
-<span class="token number">6</span> <span class="token number">2</span> <span class="token number">2</span>
-<span class="token number">3.333</span>
-\<span class="token operator">*</span><span class="token operator">/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">/*
+6 2 2
+3.333
+*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token operator">/</span>\<span class="token operator">*</span>温度\<span class="token operator">*</span><span class="token operator">/</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<h3 id="温度"><a href="#温度" class="headerlink" title="温度"></a>温度</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
     <span class="token keyword">double</span> f<span class="token punctuation">,</span> c<span class="token punctuation">;</span>
@@ -452,10 +432,9 @@ a<span class="token operator">+</span>b<span class="token operator">=</span>n，
     c <span class="token operator">=</span> <span class="token number">5</span> \<span class="token operator">*</span> <span class="token punctuation">(</span>f <span class="token operator">-</span> <span class="token number">32</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">9</span><span class="token punctuation">;</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%.3f"</span><span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token operator">/</span>\<span class="token operator">*</span>连续和\<span class="token operator">*</span><span class="token operator">/</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<h3 id="连续和"><a href="#连续和" class="headerlink" title="连续和"></a>连续和</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
     <span class="token keyword">int</span> n<span class="token punctuation">,</span> sum<span class="token punctuation">;</span>
@@ -464,7 +443,9 @@ a<span class="token operator">+</span>b<span class="token operator">=</span>n，
     <span class="token comment">//等差数列求和公式</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
   </div>
   <div>
     
@@ -512,7 +493,7 @@ a<span class="token operator">+</span>b<span class="token operator">=</span>n，
     style="padding-right: 2px;">
   </i>目录
 </div>
-
+<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E4%BD%8D%E6%95%B0%E5%8F%8D%E8%BD%AC%EF%BC%881%EF%BC%89"><span class="toc-text">三位数反转（1）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E4%BD%8D%E6%95%B0%E5%8F%8D%E8%BD%AC%EF%BC%882%EF%BC%89"><span class="toc-text">三位数反转（2）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%B8%A1%E5%85%94%E5%90%8C%E7%AC%BC"><span class="toc-text">鸡兔同笼</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E6%95%B4%E6%95%B0%E6%8E%92%E5%BA%8F"><span class="toc-text">三整数排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B3%E5%9D%87%E6%95%B0"><span class="toc-text">平均数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B8%A9%E5%BA%A6"><span class="toc-text">温度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E7%BB%AD%E5%92%8C"><span class="toc-text">连续和</span></a></li></ol>
 </div></main>
             <aside class="left-column">
               
@@ -560,7 +541,7 @@ a<span class="token operator">+</span>b<span class="token operator">=</span>n，
     style="padding-right: 2px;">
   </i>目录
 </div>
-
+<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E4%BD%8D%E6%95%B0%E5%8F%8D%E8%BD%AC%EF%BC%881%EF%BC%89"><span class="toc-text">三位数反转（1）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E4%BD%8D%E6%95%B0%E5%8F%8D%E8%BD%AC%EF%BC%882%EF%BC%89"><span class="toc-text">三位数反转（2）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%B8%A1%E5%85%94%E5%90%8C%E7%AC%BC"><span class="toc-text">鸡兔同笼</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E6%95%B4%E6%95%B0%E6%8E%92%E5%BA%8F"><span class="toc-text">三整数排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B3%E5%9D%87%E6%95%B0"><span class="toc-text">平均数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B8%A9%E5%BA%A6"><span class="toc-text">温度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E7%BB%AD%E5%92%8C"><span class="toc-text">连续和</span></a></li></ol>
       </div>
     </article>
   
@@ -640,7 +621,7 @@ a<span class="token operator">+</span>b<span class="token operator">=</span>n，
     style="padding-right: 2px;">
   </i>目录
 </div>
-
+<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E4%BD%8D%E6%95%B0%E5%8F%8D%E8%BD%AC%EF%BC%881%EF%BC%89"><span class="toc-text">三位数反转（1）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E4%BD%8D%E6%95%B0%E5%8F%8D%E8%BD%AC%EF%BC%882%EF%BC%89"><span class="toc-text">三位数反转（2）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%B8%A1%E5%85%94%E5%90%8C%E7%AC%BC"><span class="toc-text">鸡兔同笼</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E6%95%B4%E6%95%B0%E6%8E%92%E5%BA%8F"><span class="toc-text">三整数排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B3%E5%9D%87%E6%95%B0"><span class="toc-text">平均数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B8%A9%E5%BA%A6"><span class="toc-text">温度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E7%BB%AD%E5%92%8C"><span class="toc-text">连续和</span></a></li></ol>
     </article>
   
   

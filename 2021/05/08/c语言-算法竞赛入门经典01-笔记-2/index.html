@@ -317,7 +317,7 @@
     
     
       <span class="dot"></span>
-      <span>296 字</span>
+      <span>301 字</span>
     
   </div>
   
@@ -325,23 +325,21 @@
   <div 
     id="section" 
     class="post-content">
-    <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">/*数组循环输入输出*/</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+    <h3 id="数组循环输入输出"><a href="#数组循环输入输出" class="headerlink" title="数组循环输入输出"></a>数组循环输入输出</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
-    <span class="token keyword">int</span> num\<span class="token punctuation">[</span><span class="token number">1024</span>\<span class="token punctuation">]</span><span class="token punctuation">,</span> n<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> num<span class="token punctuation">[</span><span class="token number">1024</span><span class="token punctuation">]</span><span class="token punctuation">,</span> n<span class="token punctuation">;</span>
 
-<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//要输入元素的个数</span>
-<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>num\<span class="token punctuation">[</span>i\<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//循环输入元素</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//要输入元素的个数</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>num<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//循环输入元素</span>
 
-<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d "</span><span class="token punctuation">,</span> num\<span class="token punctuation">[</span>i\<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//遍历数组输出元素</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d "</span><span class="token punctuation">,</span> num<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//遍历数组输出元素</span>
 
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">/*圆柱体的表面积*/</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<h3 id="圆柱体的表面积"><a href="#圆柱体的表面积" class="headerlink" title="圆柱体的表面积"></a>圆柱体的表面积</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;math.h></span></span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
@@ -349,20 +347,19 @@
     <span class="token comment">//const定义常量pi,acos(-1.0)求π的值</span>
     <span class="token keyword">double</span> r<span class="token punctuation">,</span> h<span class="token punctuation">,</span> s1<span class="token punctuation">,</span> s2<span class="token punctuation">,</span> s<span class="token punctuation">;</span>
     <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%lf%lf"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>r<span class="token punctuation">,</span> <span class="token operator">&amp;</span>h<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    s1 <span class="token operator">=</span> pi \<span class="token operator">*</span> r \<span class="token operator">*</span> r<span class="token punctuation">;</span>
-    s2 <span class="token operator">=</span> <span class="token number">2</span> \<span class="token operator">*</span> pi \<span class="token operator">*</span> r \<span class="token operator">*</span> h<span class="token punctuation">;</span>
-    s <span class="token operator">=</span> s1 \<span class="token operator">*</span> <span class="token number">2.0</span> <span class="token operator">+</span> s2<span class="token punctuation">;</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Area = %.3f\\n"</span><span class="token punctuation">,</span> s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    s1 <span class="token operator">=</span> pi <span class="token operator">*</span> r <span class="token operator">*</span> r<span class="token punctuation">;</span>
+    s2 <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> pi <span class="token operator">*</span> r <span class="token operator">*</span> h<span class="token punctuation">;</span>
+    s <span class="token operator">=</span> s1 <span class="token operator">*</span> <span class="token number">2.0</span> <span class="token operator">+</span> s2<span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Area = %.3f\n"</span><span class="token punctuation">,</span> s<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
 <span class="token comment">/*
 圆柱体表面积=底面积\*2+侧面积
 底面积=πr^2
 侧面积=2πrh
-*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">/*交换变量-1*/</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<h3 id="交换变量-1"><a href="#交换变量-1" class="headerlink" title="交换变量-1"></a>交换变量-1</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
     <span class="token keyword">int</span> a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> t<span class="token punctuation">;</span>
@@ -372,10 +369,9 @@
     b <span class="token operator">=</span> t<span class="token punctuation">;</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d %d\\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">/*交换变量2*/</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<h3 id="交换变量-2"><a href="#交换变量-2" class="headerlink" title="交换变量-2"></a>交换变量-2</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
     <span class="token keyword">int</span> a<span class="token punctuation">,</span> b<span class="token punctuation">;</span>
@@ -391,17 +387,16 @@ a=a0,b=b0;
 a=a+b:a0+b0,b=b0;
 b=a-b:a0+b0,b=a0;
 a=a-b:a=b0,b=a0;
-*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">/*交换变量-3*/</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token keyword">int</span> a<span class="token punctuation">,</span> b<span class="token punctuation">;</span>
-    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>a<span class="token punctuation">,</span> <span class="token operator">&amp;</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d %d"</span><span class="token punctuation">,</span> b<span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="交换变量-3"><a href="#交换变量-3" class="headerlink" title="交换变量-3"></a>交换变量-3</h3><pre class="line-numbers language-C" data-language="C"><code class="language-C">#include &lt;stdio.h&gt;
+int main()
+&#123;
+    int a, b;
+    scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
+    printf(&quot;%d %d&quot;, b, a);
+    return 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
   </div>
@@ -451,7 +446,7 @@ a=a-b:a=b0,b=a0;
     style="padding-right: 2px;">
   </i>目录
 </div>
-
+<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%BE%AA%E7%8E%AF%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="toc-text">数组循环输入输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%86%E6%9F%B1%E4%BD%93%E7%9A%84%E8%A1%A8%E9%9D%A2%E7%A7%AF"><span class="toc-text">圆柱体的表面积</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A4%E6%8D%A2%E5%8F%98%E9%87%8F-1"><span class="toc-text">交换变量-1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A4%E6%8D%A2%E5%8F%98%E9%87%8F-2"><span class="toc-text">交换变量-2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A4%E6%8D%A2%E5%8F%98%E9%87%8F-3"><span class="toc-text">交换变量-3</span></a></li></ol>
 </div></main>
             <aside class="left-column">
               
@@ -499,7 +494,7 @@ a=a-b:a=b0,b=a0;
     style="padding-right: 2px;">
   </i>目录
 </div>
-
+<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%BE%AA%E7%8E%AF%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="toc-text">数组循环输入输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%86%E6%9F%B1%E4%BD%93%E7%9A%84%E8%A1%A8%E9%9D%A2%E7%A7%AF"><span class="toc-text">圆柱体的表面积</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A4%E6%8D%A2%E5%8F%98%E9%87%8F-1"><span class="toc-text">交换变量-1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A4%E6%8D%A2%E5%8F%98%E9%87%8F-2"><span class="toc-text">交换变量-2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A4%E6%8D%A2%E5%8F%98%E9%87%8F-3"><span class="toc-text">交换变量-3</span></a></li></ol>
       </div>
     </article>
   
@@ -579,7 +574,7 @@ a=a-b:a=b0,b=a0;
     style="padding-right: 2px;">
   </i>目录
 </div>
-
+<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%BE%AA%E7%8E%AF%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="toc-text">数组循环输入输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%86%E6%9F%B1%E4%BD%93%E7%9A%84%E8%A1%A8%E9%9D%A2%E7%A7%AF"><span class="toc-text">圆柱体的表面积</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A4%E6%8D%A2%E5%8F%98%E9%87%8F-1"><span class="toc-text">交换变量-1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A4%E6%8D%A2%E5%8F%98%E9%87%8F-2"><span class="toc-text">交换变量-2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A4%E6%8D%A2%E5%8F%98%E9%87%8F-3"><span class="toc-text">交换变量-3</span></a></li></ol>
     </article>
   
   

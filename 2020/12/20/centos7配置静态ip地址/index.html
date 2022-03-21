@@ -317,7 +317,7 @@
     
     
       <span class="dot"></span>
-      <span>317 字</span>
+      <span>313 字</span>
     
   </div>
   
@@ -325,14 +325,18 @@
   <div 
     id="section" 
     class="post-content">
-    <p>实验环境为Centos7.5</p>
-<p>1.打开配置文件</p>
+    <p><em>实验环境为Centos7.5</em></p>
+<ul>
+<li>打开配置文件</li>
+</ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># cd ..</span>
 <span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># ls</span>
 bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
 <span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># vi etc/sysconfig/network-scripts/ifcfg-ens33</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>2.编辑配置文件</p>
+<ul>
+<li>编辑配置文件</li>
+</ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">TYPE</span><span class="token operator">=</span>Ethernet
 <span class="token assign-left variable">PROXY_METHOD</span><span class="token operator">=</span>none
 <span class="token assign-left variable">BROWSER_ONLY</span><span class="token operator">=</span>no
@@ -354,10 +358,12 @@ bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  s
 
 <span class="token assign-left variable">NETMASK</span><span class="token operator">=</span><span class="token number">255.255</span>.255.0 <span class="token comment">#子网掩码设置</span>
 
-<span class="token assign-left variable">GETWAY</span><span class="token operator">=</span><span class="token number">192.168</span>.10.1 <span class="token comment">#网关设置</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token assign-left variable">GETWAY</span><span class="token operator">=</span><span class="token number">192.168</span>.10.1 <span class="token comment">#网关设置</span>
+<span class="token comment">#保存退出：ESC Shift+: 输入:wq #保存并退出</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>3.保存退出：ESC Shift+: 输入:wq #保存并退出</p>
-<p>4.重启网卡</p>
+<ul>
+<li>重启网卡</li>
+</ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># systemctl restart network</span>
 测试
 <span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># ping 192.168.10.10 #ping自己或者ping局域网其他主机测试</span>

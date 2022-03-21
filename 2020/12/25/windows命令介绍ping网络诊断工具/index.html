@@ -45,7 +45,7 @@
         content="2020-12-25">
       <meta 
         property="og:article:modified_time" 
-        content="2022-03-20">
+        content="2022-03-21">
       <meta 
         property="og:article:author" 
         content="Enci Lei">
@@ -317,7 +317,7 @@
     
     
       <span class="dot"></span>
-      <span>207 字</span>
+      <span>206 字</span>
     
   </div>
   
@@ -326,22 +326,22 @@
     id="section" 
     class="post-content">
     <p>ping主要是向特定的目的主机发送 ICMP（Internet Control Message Protocol 因特网报文控制协议）Echo 请求报文，测试目的站是否可达及了解其有关状态。</p>
-<pre class="line-numbers language-none"><code class="language-none">ping &#x2F;？ #查看ping命令的帮助<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">ping</span> /？ <span class="token comment">#查看ping命令的帮助</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://leienci.site/wp-content/uploads/2020/12/image-25.png" class="lozad post-image"src="https://leienci.site/wp-content/uploads/2020/12/image-25.png"></p>
+<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-25.png" class="lozad post-image"src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-25.png"></p>
 <p>Example</p>
-<pre class="line-numbers language-none"><code class="language-none">#最常用的格式
-ping 114.114.114.114 #向IP地址发送请求报文<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#最常用的格式</span>
+$ <span class="token function">ping</span> <span class="token number">114.114</span>.114.114 <span class="token comment">#向IP地址发送请求报文</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://leienci.site/wp-content/uploads/2020/12/image-26.png" class="lozad post-image"src="https://leienci.site/wp-content/uploads/2020/12/image-26.png"></p>
+<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-26.png" class="lozad post-image"src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-26.png"></p>
 <p>通过Wireshark捕获数据包发现，ping命令默认发送4个请求报文，源地址为PC地址，目的地址为指定的主机，默认TTL为128，数据包大小为32bytes（字节）</p>
-<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://leienci.site/wp-content/uploads/2020/12/image-27-1024x539.png" class="lozad post-image"src="https://leienci.site/wp-content/uploads/2020/12/image-27-1024x539.png"></p>
-<pre class="line-numbers language-none"><code class="language-none">#改点参数看看
-ping www.baidu.com -n 6 -l 64 -i 255<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-27-1536x808.png" class="lozad post-image"src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-27-1536x808.png"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#改点参数看看</span>
+$ <span class="token function">ping</span> www.baidu.com -n <span class="token number">6</span> -l <span class="token number">64</span> -i <span class="token number">255</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://leienci.site/wp-content/uploads/2020/12/image-31.png" class="lozad post-image"src="https://leienci.site/wp-content/uploads/2020/12/image-31.png"></p>
+<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-31.png" class="lozad post-image"src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-31.png"></p>
 <p>通过Wireshark捕获数据包发现，ping命令发送了6个请求报文，源地址为PC地址，目的地址被解析成为了网站IP地址，TTL变成了255，数据包大小变成64bytes（字节）</p>
-<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://leienci.site/wp-content/uploads/2020/12/image-30-1024x534.png" class="lozad post-image"src="https://leienci.site/wp-content/uploads/2020/12/image-30-1024x534.png"></p>
+<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-30.png" class="lozad post-image"src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-30.png"></p>
 
   </div>
   <div>

@@ -317,7 +317,7 @@
     
     
       <span class="dot"></span>
-      <span>427 字</span>
+      <span>415 字</span>
     
   </div>
   
@@ -334,20 +334,20 @@
 第4趟：**1 2 3 4** 5<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>选择排序使用了线性查找来寻找最小值，因此在第 1 轮中需要比较 n -1 个数字，第2 轮需要比较 n -2 个数字……到第 n -1 轮的时候就只需比较 1 个数字了。因此，总的比较次数与冒泡排序的相同，都是 (n-1)+(n-2)+…+1 ≈ n2&#x2F;2 次。每轮中交换数字的次数最多为 1 次。如果输入数据就是按从小到大的顺序排列的，便不需要进行任何交换。选择排序的时间复杂度也和冒泡排序的一样，都为 O(n^2)。</p>
-<pre class="line-numbers language-none"><code class="language-none">void selection(int num\[\], int n)
-&#123;
-    int temp;
-    for (int i &#x3D; 0; i &lt; n - 1; i++) &#x2F;&#x2F;开始选择排序
-        &#x2F;&#x2F;每次以num\[i\]为基准值 num\[i\]为当前最小值
-        for (int j &#x3D; i + 1; j &lt; n; j++)
-            if (num\[i\] &gt; num\[j\])
-            &#123;
-                &#x2F;&#x2F;遍历数组中的元素进行比较 小于基准值就进行交换
-                temp &#x3D; num\[i\];
-                num\[i\] &#x3D; num\[j\];
-                num\[j\] &#x3D; temp;
-            &#125;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">selection</span><span class="token punctuation">(</span><span class="token keyword">int</span> num<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">int</span> temp<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token comment">//开始选择排序</span>
+        <span class="token comment">//每次以num[i]为基准值 num[i]为当前最小值</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>num<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">></span> num<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token punctuation">&#123;</span>
+                <span class="token comment">//遍历数组中的元素进行比较 小于基准值就进行交换</span>
+                temp <span class="token operator">=</span> num<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                num<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> num<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                num<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <pre class="line-numbers language-none"><code class="language-none">参考书籍：
 

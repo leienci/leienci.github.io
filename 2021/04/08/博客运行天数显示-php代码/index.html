@@ -336,12 +336,12 @@
 
 <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
 
-<span class="token variable">$day</span> <span class="token operator">=</span> <span class="token function">intval</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token variable">$time</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">86400</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">//天数=(当前时间-过去时间)/86400秒</span>
-<span class="token variable">$result</span> <span class="token operator">=</span> <span class="token variable">$day</span> <span class="token operator">.</span> <span class="token string double-quoted-string">"天"</span><span class="token punctuation">;</span>
-
-<span class="token keyword">echo</span> <span class="token string double-quoted-string">"博客已运行："</span><span class="token punctuation">;</span>
-<span class="token keyword">echo</span> <span class="token variable">$result</span><span class="token punctuation">;</span>
+    <span class="token variable">$day</span> <span class="token operator">=</span> <span class="token function">intval</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token variable">$time</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">86400</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//天数=(当前时间-过去时间)/86400秒</span>
+    <span class="token variable">$result</span> <span class="token operator">=</span> <span class="token variable">$day</span> <span class="token operator">.</span> <span class="token string double-quoted-string">"天"</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">echo</span> <span class="token string double-quoted-string">"博客已运行："</span><span class="token punctuation">;</span>
+    <span class="token keyword">echo</span> <span class="token variable">$result</span><span class="token punctuation">;</span>
 
 <span class="token punctuation">&#125;</span>
 
