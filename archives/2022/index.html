@@ -64,6 +64,37 @@
   </script>
   
     
+      
+      
+      
+      
+        
+        
+        
+        <script>
+          function prismThemeChange() {
+            if(document.getElementById('theme-color').dataset.mode === 'dark') {
+              if(document.querySelector('[data-prism]')) {
+                changeCSS('/js/lib/prism/prism-tomorrow.min.css', '[data-prism]', 'prism-tomorrow');
+              } else {
+                loadCSS('/js/lib/prism/prism-tomorrow.min.css', 'prism', 'prism-tomorrow');
+              }
+            } else {
+              if(document.querySelector('[data-prism]')) {
+                changeCSS('/js/lib/prism/prism.min.css', '[data-prism]', 'prism');
+              } else {
+                loadCSS('/js/lib/prism/prism.min.css', 'prism', 'prism');
+              }
+            }
+          }
+          prismThemeChange()
+        </script>
+      
+      
+        
+        <link rel="stylesheet" href="/js/lib/prism/prism-line-numbers.min.css">
+      
+    
   
   <script>
     // control reverse button
@@ -103,15 +134,18 @@
         localStorage.removeItem('user-color-scheme');
         document.getElementById('theme-color').content = themeColor[setting];
         document.getElementById('theme-color').dataset.mode = setting;
+        prismThemeChange();
       } else if(reverseDarkList[setting]) {
         document.documentElement.setAttribute('data-user-color-scheme', setting);
         document.getElementById('theme-color').content = themeColor[setting];
         document.getElementById('theme-color').dataset.mode = setting;
+        prismThemeChange();
       } else {
         document.documentElement.removeAttribute('data-user-color-scheme');
         localStorage.removeItem('user-color-scheme');
         document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
         document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        prismThemeChange();
       }
     };
     setDarkmode();
@@ -252,12 +286,12 @@
     <div class="archive-timeline-item">
       <div class="archive-timeline-post">
         <div class="card card-content">
-          <div class="archive-timeline-post-date">2022-03-20</div>
+          <div class="archive-timeline-post-date">2022-03-19</div>
           <div class="archive-timeline-post-content">
             <a 
-              href="/2022/03/20/C%E8%AF%AD%E8%A8%80%20%E9%9A%8F%E6%9C%BA%E6%95%B0%20rand()/"
+              href="/2022/03/19/hello-world/"
               class="archive-timeline-post-item">
-              C语言 随机数 rand()
+              Hello World
             </a>
           </div>
         </div>
@@ -271,9 +305,9 @@
           <div class="archive-timeline-post-date">2022-03-19</div>
           <div class="archive-timeline-post-content">
             <a 
-              href="/2022/03/19/hello-world/"
+              href="/2022/03/19/java%E5%BC%80%E5%8F%91-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BF%9E%E6%8E%A5/"
               class="archive-timeline-post-item">
-              Hello World
+              java开发-字符串连接
             </a>
           </div>
         </div>
@@ -299,19 +333,19 @@
   <a 
     class="author-posts-count" 
     href="/archives">
-    <span>2</span>
+    <span>32</span>
     <span>文章</span>
   </a>
   <a 
     class="author-categories-count" 
     href="/categories">
-    <span>0</span>
+    <span>3</span>
     <span>分类</span>
   </a>
   <a 
     class="author-tags-count" 
     href="/tags">
-    <span>0</span>
+    <span>2</span>
     <span>标签</span>
   </a>
 </div>
@@ -331,6 +365,27 @@
   </div>
   <div class="categories-list">
     
+      <a href="/categories/%E6%9D%82%E8%B0%88/">
+        <div class="categories-list-item">
+          杂谈
+          <span class="categories-list-item-badge">24</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Linux/">
+        <div class="categories-list-item">
+          Linux
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/WordPress/">
+        <div class="categories-list-item">
+          WordPress
+          <span class="categories-list-item-badge">4</span>
+        </div>
+      </a>
+    
   </div>
 </div>
   </article>
@@ -344,6 +399,18 @@
     </i>热门标签
   </div>
   <div class="tags-list">
+    
+      <a 
+        href="/tags/%E5%A2%9E%E6%9D%90%E5%88%B6%E9%80%A0/" 
+        title="增材制造">
+        <div class="tags-list-item">增材制造</div>
+      </a>
+    
+      <a 
+        href="/tags/3D%E6%89%93%E5%8D%B0/" 
+        title="3D打印">
+        <div class="tags-list-item">3D打印</div>
+      </a>
     
   </div>
 </div>
@@ -372,12 +439,150 @@
         
       
     
+      
+        
+          <a 
+            href="/archives/2022" 
+            class="archive-card-list-item">
+            2022
+            <span class="archive-card-list-item-badge">2</span>
+          </a>
+        
+        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a 
+            href="/archives/2021" 
+            class="archive-card-list-item">
+            2021
+            <span class="archive-card-list-item-badge">19</span>
+          </a>
+        
+        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
     
       <a 
-        href="/archives/2022" 
+        href="/archives/2020" 
         class="archive-card-list-item">
-        2022
-        <span class="archive-card-list-item-badge">2</span>
+        2020
+        <span class="archive-card-list-item-badge">11</span>
       </a>
     
   </div>
@@ -402,13 +607,23 @@
   <div class="recent-posts-list">
     
       <div class="recent-posts-item">
-        <div class="recent-posts-item-title">2022-03-20</div>
-        <a href="/2022/03/20/C%E8%AF%AD%E8%A8%80%20%E9%9A%8F%E6%9C%BA%E6%95%B0%20rand()/"><div class="recent-posts-item-content">C语言 随机数 rand()</div></a>
+        <div class="recent-posts-item-title">2022-03-19</div>
+        <a href="/2022/03/19/hello-world/"><div class="recent-posts-item-content">Hello World</div></a>
       </div>
     
       <div class="recent-posts-item">
         <div class="recent-posts-item-title">2022-03-19</div>
-        <a href="/2022/03/19/hello-world/"><div class="recent-posts-item-content">Hello World</div></a>
+        <a href="/2022/03/19/java%E5%BC%80%E5%8F%91-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BF%9E%E6%8E%A5/"><div class="recent-posts-item-content">java开发-字符串连接</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2021-12-12</div>
+        <a href="/2021/12/12/3d%E6%89%93%E5%8D%B0%EF%BC%882%EF%BC%89fdm%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/"><div class="recent-posts-item-content">3D打印（2）FDM开源项目介绍</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2021-11-27</div>
+        <a href="/2021/11/27/3d%E6%89%93%E5%8D%B0%EF%BC%881%EF%BC%89%E6%8A%80%E6%9C%AF%E4%BB%8B%E7%BB%8D/"><div class="recent-posts-item-content">3D打印（1）技术介绍</div></a>
       </div>
     
   </div>
@@ -438,12 +653,150 @@
         
       
     
+      
+        
+          <a 
+            href="/archives/2022" 
+            class="archive-card-list-item">
+            2022
+            <span class="archive-card-list-item-badge">2</span>
+          </a>
+        
+        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a 
+            href="/archives/2021" 
+            class="archive-card-list-item">
+            2021
+            <span class="archive-card-list-item-badge">19</span>
+          </a>
+        
+        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
     
       <a 
-        href="/archives/2022" 
+        href="/archives/2020" 
         class="archive-card-list-item">
-        2022
-        <span class="archive-card-list-item-badge">2</span>
+        2020
+        <span class="archive-card-list-item-badge">11</span>
       </a>
     
   </div>

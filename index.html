@@ -64,6 +64,37 @@
   </script>
   
     
+      
+      
+      
+      
+        
+        
+        
+        <script>
+          function prismThemeChange() {
+            if(document.getElementById('theme-color').dataset.mode === 'dark') {
+              if(document.querySelector('[data-prism]')) {
+                changeCSS('/js/lib/prism/prism-tomorrow.min.css', '[data-prism]', 'prism-tomorrow');
+              } else {
+                loadCSS('/js/lib/prism/prism-tomorrow.min.css', 'prism', 'prism-tomorrow');
+              }
+            } else {
+              if(document.querySelector('[data-prism]')) {
+                changeCSS('/js/lib/prism/prism.min.css', '[data-prism]', 'prism');
+              } else {
+                loadCSS('/js/lib/prism/prism.min.css', 'prism', 'prism');
+              }
+            }
+          }
+          prismThemeChange()
+        </script>
+      
+      
+        
+        <link rel="stylesheet" href="/js/lib/prism/prism-line-numbers.min.css">
+      
+    
   
   <script>
     // control reverse button
@@ -103,15 +134,18 @@
         localStorage.removeItem('user-color-scheme');
         document.getElementById('theme-color').content = themeColor[setting];
         document.getElementById('theme-color').dataset.mode = setting;
+        prismThemeChange();
       } else if(reverseDarkList[setting]) {
         document.documentElement.setAttribute('data-user-color-scheme', setting);
         document.getElementById('theme-color').content = themeColor[setting];
         document.getElementById('theme-color').dataset.mode = setting;
+        prismThemeChange();
       } else {
         document.documentElement.removeAttribute('data-user-color-scheme');
         localStorage.removeItem('user-color-scheme');
         document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
         document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        prismThemeChange();
       }
     };
     setDarkmode();
@@ -242,38 +276,6 @@
   <div class="card">
     
     <article class="card card-content">
-      <a href="/2022/03/20/C%E8%AF%AD%E8%A8%80%20%E9%9A%8F%E6%9C%BA%E6%95%B0%20rand()/">
-        <h1 class="post-title">
-          C语言 随机数 rand()
-        </h1>
-      </a>
-      <div class="card-excerpt">
-        
-          
-rand()函数的使用
-
-#
-        
-      </div>
-      <div class="card-post-footer">
-        <div class="post-meta">
-          <time datetime="2022-03-20T10:27:08.340Z">
-            <i 
-              class="iconfont icon-calendar" 
-              style="margin-right: 2px;">
-            </i>
-            <span>2022-03-20</span>
-          </time>
-          
-        </div>
-        <a href="/2022/03/20/C%E8%AF%AD%E8%A8%80%20%E9%9A%8F%E6%9C%BA%E6%95%B0%20rand()/">继续阅读 </a>
-      </div>
-    </article>
-  </div>
-
-  <div class="card">
-    
-    <article class="card card-content">
       <a href="/2022/03/19/hello-world/">
         <h1 class="post-title">
           Hello World
@@ -300,6 +302,420 @@ rand()函数的使用
     </article>
   </div>
 
+  <div class="card">
+    
+    <article class="card card-content">
+      <a href="/2022/03/19/java%E5%BC%80%E5%8F%91-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BF%9E%E6%8E%A5/">
+        <h1 class="post-title">
+          java开发-字符串连接
+        </h1>
+      </a>
+      <div class="card-excerpt">
+        
+          
+字符串连接concat()
+
+
+        
+      </div>
+      <div class="card-post-footer">
+        <div class="post-meta">
+          <time datetime="2022-03-19T08:38:59.000Z">
+            <i 
+              class="iconfont icon-calendar" 
+              style="margin-right: 2px;">
+            </i>
+            <span>2022-03-19</span>
+          </time>
+          
+            
+            
+              
+            
+            <span class="dot"></span>
+            
+              
+              <a 
+                href="/categories/%E6%9D%82%E8%B0%88/" 
+                class="post-meta-link">
+                杂谈
+              </a>
+            
+          
+        </div>
+        <a href="/2022/03/19/java%E5%BC%80%E5%8F%91-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BF%9E%E6%8E%A5/">继续阅读 </a>
+      </div>
+    </article>
+  </div>
+
+  <div class="card">
+    
+    <article class="card card-content">
+      <a href="/2021/12/12/3d%E6%89%93%E5%8D%B0%EF%BC%882%EF%BC%89fdm%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/">
+        <h1 class="post-title">
+          3D打印（2）FDM开源项目介绍
+        </h1>
+      </a>
+      <div class="card-excerpt">
+        
+          3D打印（2）FDM开源项目介...
+        
+      </div>
+      <div class="card-post-footer">
+        <div class="post-meta">
+          <time datetime="2021-12-12T06:06:35.000Z">
+            <i 
+              class="iconfont icon-calendar" 
+              style="margin-right: 2px;">
+            </i>
+            <span>2021-12-12</span>
+          </time>
+          
+            
+            
+              
+            
+            <span class="dot"></span>
+            
+              
+              <a 
+                href="/categories/%E6%9D%82%E8%B0%88/" 
+                class="post-meta-link">
+                杂谈
+              </a>
+            
+          
+        </div>
+        <a href="/2021/12/12/3d%E6%89%93%E5%8D%B0%EF%BC%882%EF%BC%89fdm%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/">继续阅读 </a>
+      </div>
+    </article>
+  </div>
+
+  <div class="card">
+    
+    <article class="card card-content">
+      <a href="/2021/11/27/3d%E6%89%93%E5%8D%B0%EF%BC%881%EF%BC%89%E6%8A%80%E6%9C%AF%E4%BB%8B%E7%BB%8D/">
+        <h1 class="post-title">
+          3D打印（1）技术介绍
+        </h1>
+      </a>
+      <div class="card-excerpt">
+        
+          近两个月来，发生了许多事情，心态一直不是很好。没有了持续的输入，也就没有内容的输出。先端正心态，调整好自己的状态吧，不希望浪费21年剩下的时间。博客也快一周年了，到时会写篇文章里碎碎念下，聊聊自己，聊聊未来。
+        
+      </div>
+      <div class="card-post-footer">
+        <div class="post-meta">
+          <time datetime="2021-11-27T12:32:57.000Z">
+            <i 
+              class="iconfont icon-calendar" 
+              style="margin-right: 2px;">
+            </i>
+            <span>2021-11-27</span>
+          </time>
+          
+            
+            
+              
+            
+            <span class="dot"></span>
+            
+              
+              <a 
+                href="/categories/%E6%9D%82%E8%B0%88/" 
+                class="post-meta-link">
+                杂谈
+              </a>
+            
+          
+        </div>
+        <a href="/2021/11/27/3d%E6%89%93%E5%8D%B0%EF%BC%881%EF%BC%89%E6%8A%80%E6%9C%AF%E4%BB%8B%E7%BB%8D/">继续阅读 </a>
+      </div>
+    </article>
+  </div>
+
+  <div class="card">
+    
+    <article class="card card-content">
+      <a href="/2021/10/11/win10-%E6%8E%A5%E5%8F%A3%E8%B7%83%E7%82%B9%E6%95%B0%E5%92%8C%E7%BD%91%E5%8D%A1%E4%BC%98%E5%85%88%E7%BA%A7/">
+        <h1 class="post-title">
+          Win10 接口跃点数和网卡优先级
+        </h1>
+      </a>
+      <div class="card-excerpt">
+        
+          我的宿舍每天到点就自动断网，在断网后要想继续Happy Surfing，不得已使用手机移动热点给电脑续网。不过电脑每次连接热点后，数据还是会从有线网卡转发出， Surfing了个寂寞。马上想到的Windows路由，
+        
+      </div>
+      <div class="card-post-footer">
+        <div class="post-meta">
+          <time datetime="2021-10-11T15:15:27.000Z">
+            <i 
+              class="iconfont icon-calendar" 
+              style="margin-right: 2px;">
+            </i>
+            <span>2021-10-11</span>
+          </time>
+          
+            
+            
+              
+            
+            <span class="dot"></span>
+            
+              
+              <a 
+                href="/categories/%E6%9D%82%E8%B0%88/" 
+                class="post-meta-link">
+                杂谈
+              </a>
+            
+          
+        </div>
+        <a href="/2021/10/11/win10-%E6%8E%A5%E5%8F%A3%E8%B7%83%E7%82%B9%E6%95%B0%E5%92%8C%E7%BD%91%E5%8D%A1%E4%BC%98%E5%85%88%E7%BA%A7/">继续阅读 </a>
+      </div>
+    </article>
+  </div>
+
+  <div class="card">
+    
+    <article class="card card-content">
+      <a href="/2021/09/04/java%E5%BC%80%E5%8F%91-jdk%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+        <h1 class="post-title">
+          JAVA开发 JDK环境配置
+        </h1>
+      </a>
+      <div class="card-excerpt">
+        
+          （一）JDK的安装
+演示的版本为jdk-8u201-windows-x64，安装的系统为Windows10版本1909。
+安装过程默认下一步即可
+
+        
+      </div>
+      <div class="card-post-footer">
+        <div class="post-meta">
+          <time datetime="2021-09-04T08:00:54.000Z">
+            <i 
+              class="iconfont icon-calendar" 
+              style="margin-right: 2px;">
+            </i>
+            <span>2021-09-04</span>
+          </time>
+          
+            
+            
+              
+            
+            <span class="dot"></span>
+            
+              
+              <a 
+                href="/categories/%E6%9D%82%E8%B0%88/" 
+                class="post-meta-link">
+                杂谈
+              </a>
+            
+          
+        </div>
+        <a href="/2021/09/04/java%E5%BC%80%E5%8F%91-jdk%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">继续阅读 </a>
+      </div>
+    </article>
+  </div>
+
+  <div class="card">
+    
+    <article class="card card-content">
+      <a href="/2021/08/29/%E8%AE%B0%E5%BD%95-win10-%E8%93%9D%E5%B1%8F-%E4%BB%A3%E7%A0%81memory-management/">
+        <h1 class="post-title">
+          记录 win10 蓝屏 代码MEMORY_MANAGEMENT
+        </h1>
+      </a>
+      <div class="card-excerpt">
+        
+          故障来自博主自用的Thinkpad T460p笔记本电脑，21年来使用时不断蓝屏，诱发蓝屏原因未知，每次解决方案就是无脑重启。近期耐心的整理硬盘数据，蓝屏状态复现，故细心排查蓝屏的原因。
+
+        
+      </div>
+      <div class="card-post-footer">
+        <div class="post-meta">
+          <time datetime="2021-08-29T10:34:40.000Z">
+            <i 
+              class="iconfont icon-calendar" 
+              style="margin-right: 2px;">
+            </i>
+            <span>2021-08-29</span>
+          </time>
+          
+            
+            
+              
+            
+            <span class="dot"></span>
+            
+              
+              <a 
+                href="/categories/%E6%9D%82%E8%B0%88/" 
+                class="post-meta-link">
+                杂谈
+              </a>
+            
+          
+        </div>
+        <a href="/2021/08/29/%E8%AE%B0%E5%BD%95-win10-%E8%93%9D%E5%B1%8F-%E4%BB%A3%E7%A0%81memory-management/">继续阅读 </a>
+      </div>
+    </article>
+  </div>
+
+  <div class="card">
+    
+    <article class="card card-content">
+      <a href="/2021/07/16/%E6%9C%9F%E6%9C%AB%E5%B0%8F%E8%AE%B0/">
+        <h1 class="post-title">
+          期末小记
+        </h1>
+      </a>
+      <div class="card-excerpt">
+        
+          
+今天是2021年7月16日，我大一学习生活的最后一天。完成小学期项目答辩后，我坐在机房里等待着下课。距离上次更新博客已经过去一个多月，之前写过几篇碎碎念都没发出来，感觉我博客的风格需要调整一番。
+
+        
+      </div>
+      <div class="card-post-footer">
+        <div class="post-meta">
+          <time datetime="2021-07-16T03:32:01.000Z">
+            <i 
+              class="iconfont icon-calendar" 
+              style="margin-right: 2px;">
+            </i>
+            <span>2021-07-16</span>
+          </time>
+          
+            
+            
+              
+            
+            <span class="dot"></span>
+            
+              
+              <a 
+                href="/categories/%E6%9D%82%E8%B0%88/" 
+                class="post-meta-link">
+                杂谈
+              </a>
+            
+          
+        </div>
+        <a href="/2021/07/16/%E6%9C%9F%E6%9C%AB%E5%B0%8F%E8%AE%B0/">继续阅读 </a>
+      </div>
+    </article>
+  </div>
+
+  <div class="card">
+    
+    <article class="card card-content">
+      <a href="/2021/05/24/c%E8%AF%AD%E8%A8%80-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%A0%91%E6%93%8D%E4%BD%9C/">
+        <h1 class="post-title">
+          C语言 数据结构 二叉树操作
+        </h1>
+      </a>
+      <div class="card-excerpt">
+        
+          求二叉树高度
+
+        
+      </div>
+      <div class="card-post-footer">
+        <div class="post-meta">
+          <time datetime="2021-05-24T09:07:57.000Z">
+            <i 
+              class="iconfont icon-calendar" 
+              style="margin-right: 2px;">
+            </i>
+            <span>2021-05-24</span>
+          </time>
+          
+            
+            
+              
+            
+            <span class="dot"></span>
+            
+              
+              <a 
+                href="/categories/%E6%9D%82%E8%B0%88/" 
+                class="post-meta-link">
+                杂谈
+              </a>
+            
+          
+        </div>
+        <a href="/2021/05/24/c%E8%AF%AD%E8%A8%80-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%A0%91%E6%93%8D%E4%BD%9C/">继续阅读 </a>
+      </div>
+    </article>
+  </div>
+
+  <div class="card">
+    
+    <article class="card card-content">
+      <a href="/2021/05/09/c%E8%AF%AD%E8%A8%80-%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B802-%E7%AC%94%E8%AE%B0/">
+        <h1 class="post-title">
+          C语言 算法竞赛入门经典02 笔记
+        </h1>
+      </a>
+      <div class="card-excerpt">
+        
+          /...
+        
+      </div>
+      <div class="card-post-footer">
+        <div class="post-meta">
+          <time datetime="2021-05-09T08:46:04.000Z">
+            <i 
+              class="iconfont icon-calendar" 
+              style="margin-right: 2px;">
+            </i>
+            <span>2021-05-09</span>
+          </time>
+          
+            
+            
+              
+            
+            <span class="dot"></span>
+            
+              
+              <a 
+                href="/categories/%E6%9D%82%E8%B0%88/" 
+                class="post-meta-link">
+                杂谈
+              </a>
+            
+          
+        </div>
+        <a href="/2021/05/09/c%E8%AF%AD%E8%A8%80-%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B802-%E7%AC%94%E8%AE%B0/">继续阅读 </a>
+      </div>
+    </article>
+  </div>
+
+
+  <div class="nav">
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/page/2/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一页</div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
 </main>
             <aside class="left-column">
               
@@ -318,19 +734,19 @@ rand()函数的使用
   <a 
     class="author-posts-count" 
     href="/archives">
-    <span>2</span>
+    <span>32</span>
     <span>文章</span>
   </a>
   <a 
     class="author-categories-count" 
     href="/categories">
-    <span>0</span>
+    <span>3</span>
     <span>分类</span>
   </a>
   <a 
     class="author-tags-count" 
     href="/tags">
-    <span>0</span>
+    <span>2</span>
     <span>标签</span>
   </a>
 </div>
@@ -350,6 +766,27 @@ rand()函数的使用
   </div>
   <div class="categories-list">
     
+      <a href="/categories/%E6%9D%82%E8%B0%88/">
+        <div class="categories-list-item">
+          杂谈
+          <span class="categories-list-item-badge">24</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Linux/">
+        <div class="categories-list-item">
+          Linux
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/WordPress/">
+        <div class="categories-list-item">
+          WordPress
+          <span class="categories-list-item-badge">4</span>
+        </div>
+      </a>
+    
   </div>
 </div>
   </article>
@@ -363,6 +800,18 @@ rand()函数的使用
     </i>热门标签
   </div>
   <div class="tags-list">
+    
+      <a 
+        href="/tags/%E5%A2%9E%E6%9D%90%E5%88%B6%E9%80%A0/" 
+        title="增材制造">
+        <div class="tags-list-item">增材制造</div>
+      </a>
+    
+      <a 
+        href="/tags/3D%E6%89%93%E5%8D%B0/" 
+        title="3D打印">
+        <div class="tags-list-item">3D打印</div>
+      </a>
     
   </div>
 </div>
@@ -391,12 +840,150 @@ rand()函数的使用
         
       
     
+      
+        
+          <a 
+            href="/archives/2022" 
+            class="archive-card-list-item">
+            2022
+            <span class="archive-card-list-item-badge">2</span>
+          </a>
+        
+        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a 
+            href="/archives/2021" 
+            class="archive-card-list-item">
+            2021
+            <span class="archive-card-list-item-badge">19</span>
+          </a>
+        
+        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
     
       <a 
-        href="/archives/2022" 
+        href="/archives/2020" 
         class="archive-card-list-item">
-        2022
-        <span class="archive-card-list-item-badge">2</span>
+        2020
+        <span class="archive-card-list-item-badge">11</span>
       </a>
     
   </div>
@@ -421,13 +1008,23 @@ rand()函数的使用
   <div class="recent-posts-list">
     
       <div class="recent-posts-item">
-        <div class="recent-posts-item-title">2022-03-20</div>
-        <a href="/2022/03/20/C%E8%AF%AD%E8%A8%80%20%E9%9A%8F%E6%9C%BA%E6%95%B0%20rand()/"><div class="recent-posts-item-content">C语言 随机数 rand()</div></a>
+        <div class="recent-posts-item-title">2022-03-19</div>
+        <a href="/2022/03/19/hello-world/"><div class="recent-posts-item-content">Hello World</div></a>
       </div>
     
       <div class="recent-posts-item">
         <div class="recent-posts-item-title">2022-03-19</div>
-        <a href="/2022/03/19/hello-world/"><div class="recent-posts-item-content">Hello World</div></a>
+        <a href="/2022/03/19/java%E5%BC%80%E5%8F%91-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BF%9E%E6%8E%A5/"><div class="recent-posts-item-content">java开发-字符串连接</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2021-12-12</div>
+        <a href="/2021/12/12/3d%E6%89%93%E5%8D%B0%EF%BC%882%EF%BC%89fdm%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/"><div class="recent-posts-item-content">3D打印（2）FDM开源项目介绍</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2021-11-27</div>
+        <a href="/2021/11/27/3d%E6%89%93%E5%8D%B0%EF%BC%881%EF%BC%89%E6%8A%80%E6%9C%AF%E4%BB%8B%E7%BB%8D/"><div class="recent-posts-item-content">3D打印（1）技术介绍</div></a>
       </div>
     
   </div>
@@ -457,12 +1054,150 @@ rand()函数的使用
         
       
     
+      
+        
+          <a 
+            href="/archives/2022" 
+            class="archive-card-list-item">
+            2022
+            <span class="archive-card-list-item-badge">2</span>
+          </a>
+        
+        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a 
+            href="/archives/2021" 
+            class="archive-card-list-item">
+            2021
+            <span class="archive-card-list-item-badge">19</span>
+          </a>
+        
+        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
     
       <a 
-        href="/archives/2022" 
+        href="/archives/2020" 
         class="archive-card-list-item">
-        2022
-        <span class="archive-card-list-item-badge">2</span>
+        2020
+        <span class="archive-card-list-item-badge">11</span>
       </a>
     
   </div>
