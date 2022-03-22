@@ -183,7 +183,7 @@
   
   
     
-    <link rel="prefetch" href="//cdn-city.livere.com/js/embed.dist.js" as="script">
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
   
   
   
@@ -425,23 +425,34 @@ CentOS-CR.repo    CentOS-fasttrack.repo  CentOS-Sources.repo
     style="margin-top: 16px;">
     <div class="comment-card-title">评论</div>
     
-  <div 
-    id="lv-container" 
-    data-id="city" 
-    data-uid="MTAyMC81NTgxNi8zMjI4MQ==">
-    <script>
-      (function (d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') {
-          return;
-        }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.defer = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
-  </div>
+  <div id="vcomments"></div>
+  
+  <script>
+    loadScript("//unpkg.com/valine/dist/Valine.min.js");
+    var oldLoadVa = window.onload;
+    window.onload = function () {
+      oldLoadVa && oldLoadVa();
+      new Valine({
+        el: '#vcomments',
+        appId: 'WEjXEMRF9RBvKHX0rPIwTCYY-gzGzoHsz',
+        appKey: 'y5okF6ngc1X1y8Co9LURfipA',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        path: window.location.pathname,
+        avatar: 'mp',
+        meta: ["nick","mail","link"],
+        pageSize: '8',
+        lang: '',
+        visitor: 'false',
+        highlight: true,
+        recordIP: false,
+        
+        
+        
+        enableQQ: 'false',
+        requiredFields: [],
+      });
+    };
+  </script>
 
   </div>
 
