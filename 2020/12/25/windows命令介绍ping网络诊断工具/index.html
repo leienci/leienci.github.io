@@ -45,7 +45,7 @@
         content="2020-12-25">
       <meta 
         property="og:article:modified_time" 
-        content="2022-03-21">
+        content="2022-03-23">
       <meta 
         property="og:article:author" 
         content="Enci Lei">
@@ -336,20 +336,20 @@
     <p>ping主要是向特定的目的主机发送 ICMP（Internet Control Message Protocol 因特网报文控制协议）Echo 请求报文，测试目的站是否可达及了解其有关状态。</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">ping</span> /？ <span class="token comment">#查看ping命令的帮助</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-25.png" class="lozad post-image"src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-25.png"></p>
+<p><img  srcset="/img/loading.png" data-src="https://img.leienci.site/img_old/image-25.png" class="lozad post-image"src="https://img.leienci.site/img_old/image-25.png"></p>
 <p>Example</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#最常用的格式</span>
 $ <span class="token function">ping</span> <span class="token number">114.114</span>.114.114 <span class="token comment">#向IP地址发送请求报文</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-26.png" class="lozad post-image"src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-26.png"></p>
+<p><img  srcset="/img/loading.png" data-src="https://img.leienci.site/img_old/image-26.png" class="lozad post-image"src="https://img.leienci.site/img_old/image-26.png"></p>
 <p>通过Wireshark捕获数据包发现，ping命令默认发送4个请求报文，源地址为PC地址，目的地址为指定的主机，默认TTL为128，数据包大小为32bytes（字节）</p>
-<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-27-1536x808.png" class="lozad post-image"src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-27-1536x808.png"></p>
+<p><img  srcset="/img/loading.png" data-src="https://img.leienci.site/img_old/image-27-1536x808.png" class="lozad post-image"src="https://img.leienci.site/img_old/image-27-1536x808.png"></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#改点参数看看</span>
 $ <span class="token function">ping</span> www.baidu.com -n <span class="token number">6</span> -l <span class="token number">64</span> -i <span class="token number">255</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-31.png" class="lozad post-image"src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-31.png"></p>
+<p><img  srcset="/img/loading.png" data-src="https://img.leienci.site/img_old/image-31.png" class="lozad post-image"src="https://img.leienci.site/img_old/image-31.png"></p>
 <p>通过Wireshark捕获数据包发现，ping命令发送了6个请求报文，源地址为PC地址，目的地址被解析成为了网站IP地址，TTL变成了255，数据包大小变成64bytes（字节）</p>
-<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-30.png" class="lozad post-image"src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-30.png"></p>
+<p><img  srcset="/img/loading.png" data-src="https://img.leienci.site/img_old/image-30.png" class="lozad post-image"src="https://img.leienci.site/img_old/image-30.png"></p>
 
   </div>
   <div>
@@ -497,15 +497,15 @@ $ <span class="token function">ping</span> www.baidu.com -n <span class="token n
   <div class="tags-list">
     
       <a 
-        href="/tags/%E5%A2%9E%E6%9D%90%E5%88%B6%E9%80%A0/" 
-        title="增材制造">
-        <div class="tags-list-item">增材制造</div>
-      </a>
-    
-      <a 
         href="/tags/3D%E6%89%93%E5%8D%B0/" 
         title="3D打印">
         <div class="tags-list-item">3D打印</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A2%9E%E6%9D%90%E5%88%B6%E9%80%A0/" 
+        title="增材制造">
+        <div class="tags-list-item">增材制造</div>
       </a>
     
   </div>

@@ -45,7 +45,7 @@
         content="2021-10-11">
       <meta 
         property="og:article:modified_time" 
-        content="2022-03-21">
+        content="2022-03-23">
       <meta 
         property="og:article:author" 
         content="Enci Lei">
@@ -334,13 +334,13 @@
     id="section" 
     class="post-content">
     <p>我的宿舍每天到点就自动断网，在断网后要想继续Happy Surfing，不得已使用手机移动热点给电脑续网。不过电脑每次连接热点后，数据还是会从有线网卡转发出， Surfing了个寂寞。马上想到的Windows路由，<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41995013/article/details/105455009">查询删除路</a>由条目一气呵成。</p>
-<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-1024x535.png" class="lozad post-image"src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-1024x535.png"></p>
+<p><img  srcset="/img/loading.png" data-src="https://img.leienci.site/img_old/image-1024x535.png" class="lozad post-image"src="https://img.leienci.site/img_old/image-1024x535.png"></p>
 <p>有线网卡的优先级高于无线网卡</p>
 <p>问题是每一次断网，连接上热点的时候就要来一遍，觉得实在是有点麻烦，后面发现禁用有线网卡更加的快捷有效（已经可以熟练到飞速禁用网卡了），思考个一劳永逸的方法还是非常重要，直到最近发现了跃点数可以手动修改。</p>
 <p>控制面板\网络和 Internet\网络和共享中-选择网卡-Internet协议版本4(TCP&#x2F;IP)-高级</p>
-<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-1-1024x695.png" class="lozad post-image"src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-1-1024x695.png"></p>
+<p><img  srcset="/img/loading.png" data-src="https://img.leienci.site/img_old/image-1-1024x695.png" class="lozad post-image"src="https://img.leienci.site/img_old/image-1-1024x695.png"></p>
 <p>将无线网卡的跃点数修改至比有线网卡小，跃点数越小网卡的优先级越高。再次查询Windows路由，发现无线网卡的优先级高于了有线网卡。</p>
-<p><img  srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-3-1024x535.png" class="lozad post-image"src="https://cdn.jsdelivr.net/gh/leienci/leienci_hexo_image/img_old/image-3-1024x535.png"></p>
+<p><img  srcset="/img/loading.png" data-src="https://img.leienci.site/img_old/image-3-1024x535.png" class="lozad post-image"src="https://img.leienci.site/img_old/image-3-1024x535.png"></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ route print <span class="token comment">#Windows路由查询命令</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>跃点数参考：<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%B7%83%E7%82%B9%E6%95%B0/4941127?fr=aladdin">https://baike.baidu.com/item/%E8%B7%83%E7%82%B9%E6%95%B0/4941127?fr=aladdin</a></p>
@@ -491,15 +491,15 @@
   <div class="tags-list">
     
       <a 
-        href="/tags/%E5%A2%9E%E6%9D%90%E5%88%B6%E9%80%A0/" 
-        title="增材制造">
-        <div class="tags-list-item">增材制造</div>
-      </a>
-    
-      <a 
         href="/tags/3D%E6%89%93%E5%8D%B0/" 
         title="3D打印">
         <div class="tags-list-item">3D打印</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A2%9E%E6%9D%90%E5%88%B6%E9%80%A0/" 
+        title="增材制造">
+        <div class="tags-list-item">增材制造</div>
       </a>
     
   </div>
