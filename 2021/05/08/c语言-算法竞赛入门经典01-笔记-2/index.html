@@ -183,7 +183,7 @@
   
   
     
-    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js" as="script">
   
   
   
@@ -453,35 +453,6 @@ int main()
     style="margin-top: 16px;">
     <div class="comment-card-title">评论</div>
     
-  <div id="vcomments"></div>
-  
-  <script>
-    loadScript("//unpkg.com/valine/dist/Valine.min.js");
-    var oldLoadVa = window.onload;
-    window.onload = function () {
-      oldLoadVa && oldLoadVa();
-      new Valine({
-        el: '#vcomments',
-        appId: '0Vwvy0uT48vG5UapfmfWoFf1-gzGzoHsz',
-        appKey: '7MzTbzOWokypgf9neP8LU9uz',
-        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
-        path: window.location.pathname,
-        avatar: 'mp',
-        meta: ["nick","mail","link"],
-        pageSize: '8',
-        lang: '',
-        visitor: 'false',
-        highlight: true,
-        recordIP: false,
-        
-        
-        
-        enableQQ: 'false',
-        requiredFields: [],
-      });
-    };
-  </script>
-
   </div>
 
 <div 
