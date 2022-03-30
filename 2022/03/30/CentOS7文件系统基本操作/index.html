@@ -18,17 +18,17 @@
   <link 
     rel="icon" 
     href="/img/logo.png">
-  <title>CentOS7配置静态IP地址</title>
+  <title>CentOS7文件系统基本操作</title>
   
     
       <meta 
         property="og:title" 
-        content="CentOS7配置静态IP地址">
+        content="CentOS7文件系统基本操作">
     
     
       <meta 
         property="og:url" 
-        content="http://example.com/2020/12/20/centos7%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81ip%E5%9C%B0%E5%9D%80/index.html">
+        content="http://example.com/2022/03/30/CentOS7%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/index.html">
     
     
       <meta 
@@ -42,10 +42,10 @@
         content="article">
       <meta 
         property="og:article:published_time" 
-        content="2020-12-20">
+        content="2022-03-30">
       <meta 
         property="og:article:modified_time" 
-        content="2022-03-21">
+        content="2022-03-30">
       <meta 
         property="og:article:author" 
         content="Enci Lei">
@@ -305,16 +305,16 @@
 <article class="card card-content">
   <header>
     <h1 class="post-title">
-      CentOS7配置静态IP地址
+      CentOS7文件系统基本操作
     </h1>
   </header>
   <div class="post-meta post-show-meta">
-    <time datetime="2020-12-20T06:17:36.000Z">
+    <time datetime="2022-03-30T13:33:02.000Z">
       <i 
         class="iconfont icon-calendar" 
         style="margin-right: 2px;">
       </i>
-      <span>2020-12-20</span>
+      <span>2022-03-30</span>
     </time>
     
       <span class="dot"></span>
@@ -328,7 +328,7 @@
     
     
       <span class="dot"></span>
-      <span>313 字</span>
+      <span>99 字</span>
     
   </div>
   
@@ -337,57 +337,30 @@
     id="section" 
     class="post-content">
     <p><em>实验环境为Centos7.5</em></p>
-<ul>
-<li>打开配置文件</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># cd ..</span>
-<span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># ls</span>
-bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
-<span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># vi etc/sysconfig/network-scripts/ifcfg-ens33</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">touch</span> tempfile <span class="token comment">#新建名为tempfile的文件</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<ul>
-<li>编辑配置文件</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">TYPE</span><span class="token operator">=</span>Ethernet
-<span class="token assign-left variable">PROXY_METHOD</span><span class="token operator">=</span>none
-<span class="token assign-left variable">BROWSER_ONLY</span><span class="token operator">=</span>no
-<span class="token assign-left variable">BOOTPROTO</span><span class="token operator">=</span>statics <span class="token comment">#dhcp为动态获取IP地址，statics为静态获取IP地址。</span>
-<span class="token assign-left variable">DEFROUTE</span><span class="token operator">=</span>yes
-<span class="token assign-left variable">IPV4_FAILURE_FATAL</span><span class="token operator">=</span>no
-<span class="token assign-left variable">IPV6INIT</span><span class="token operator">=</span>yes
-<span class="token assign-left variable">IPV6_AUTOCONF</span><span class="token operator">=</span>yes
-<span class="token assign-left variable">IPV6_DEFROUTE</span><span class="token operator">=</span>yes
-<span class="token assign-left variable">IPV6_FAILURE_FATAL</span><span class="token operator">=</span>no
-<span class="token assign-left variable">IPV6_ADDR_GEN_MODE</span><span class="token operator">=</span>stable-privacy
-<span class="token assign-left variable">NAME</span><span class="token operator">=</span>ens33
-<span class="token assign-left variable">UUID</span><span class="token operator">=</span>4b20da7e-0986-46f4-8e98-ab3b16fc4f0e
-<span class="token assign-left variable">DEVICE</span><span class="token operator">=</span>ens33
-<span class="token assign-left variable">ONBOOT</span><span class="token operator">=</span>yes <span class="token comment">#是否开机启用该网卡no为否，yes为是。</span>
+<img src="https://img.leienci.site/img/image-20220330214124011.png" alt="image-20220330214124011"  / srcset="/img/loading.png" data-src="https://img.leienci.site/img/image-20220330214124011.png" class="lozad post-image">
 
-<span class="token comment">#在后方添加一下</span>
-<span class="token assign-left variable">IPADDR</span><span class="token operator">=</span><span class="token number">192.168</span>.10.10 <span class="token comment">#IP地址设置</span>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">ls</span> -a <span class="token comment">#--all的缩写，显示所有的文件，包括隐藏文件</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<span class="token assign-left variable">NETMASK</span><span class="token operator">=</span><span class="token number">255.255</span>.255.0 <span class="token comment">#子网掩码设置</span>
+<p><img src="https://img.leienci.site/img/image-20220330214245391.png" alt="image-20220330214245391" srcset="/img/loading.png" data-src="https://img.leienci.site/img/image-20220330214245391.png" class="lozad post-image"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">ls</span> / <span class="token comment">#显示根目录下的文件</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<span class="token assign-left variable">GETWAY</span><span class="token operator">=</span><span class="token number">192.168</span>.10.1 <span class="token comment">#网关设置</span>
-<span class="token comment">#保存退出：ESC Shift+: 输入:wq #保存并退出</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://img.leienci.site/img/image-20220330214754152.png" alt="image-20220330214754152" srcset="/img/loading.png" data-src="https://img.leienci.site/img/image-20220330214754152.png" class="lozad post-image"></p>
+<p><img src="https://img.leienci.site/img/d0c50-linux2bfile2bsystem2bhierarchy.jpg" alt="img" srcset="/img/loading.png" data-src="https://img.leienci.site/img/d0c50-linux2bfile2bsystem2bhierarchy.jpg" class="lozad post-image"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token builtin class-name">pwd</span> <span class="token comment">#（英文全拼：print work directory） 命令用于显示工作目录</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<ul>
-<li>重启网卡</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># systemctl restart network</span>
-测试
-<span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># ping 192.168.10.10 #ping自己或者ping局域网其他主机测试</span>
+<p><img src="https://img.leienci.site/img/image-20220330215144067.png" alt="image-20220330215144067" srcset="/img/loading.png" data-src="https://img.leienci.site/img/image-20220330215144067.png" class="lozad post-image"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">ls</span> -l tempfile <span class="token comment">#显示文件详情信息</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-PING <span class="token number">192.168</span>.10.10 <span class="token punctuation">(</span><span class="token number">192.168</span>.10.10<span class="token punctuation">)</span> <span class="token number">56</span><span class="token punctuation">(</span><span class="token number">84</span><span class="token punctuation">)</span> bytes of data.
-<span class="token number">64</span> bytes from <span class="token number">192.168</span>.10.10: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">1</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">64</span> <span class="token assign-left variable">time</span><span class="token operator">=</span><span class="token number">0.061</span> ms
-<span class="token number">64</span> bytes from <span class="token number">192.168</span>.10.10: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">2</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">64</span> <span class="token assign-left variable">time</span><span class="token operator">=</span><span class="token number">0.072</span> ms
-<span class="token number">64</span> bytes from <span class="token number">192.168</span>.10.10: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">3</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">64</span> <span class="token assign-left variable">time</span><span class="token operator">=</span><span class="token number">0.070</span> ms
-<span class="token number">64</span> bytes from <span class="token number">192.168</span>.10.10: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">4</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">64</span> <span class="token assign-left variable">time</span><span class="token operator">=</span><span class="token number">0.062</span> ms
-^C <span class="token comment">#Ctrl+C中止发包</span>
---- <span class="token number">192.168</span>.10.10 <span class="token function">ping</span> statistics ---
-<span class="token number">4</span> packets transmitted, <span class="token number">4</span> received, <span class="token number">0</span>% packet loss, <span class="token function">time</span> 3007ms
-rtt min/avg/max/mdev <span class="token operator">=</span> <span class="token number">0.061</span>/0.066/0.072/0.007 ms<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://img.leienci.site/img/image-20220330220206087.png" alt="image-20220330220206087" srcset="/img/loading.png" data-src="https://img.leienci.site/img/image-20220330220206087.png" class="lozad post-image"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">mkdir</span> Files <span class="token comment">#新建名为Files的文件夹</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://img.leienci.site/img/image-20220330220517123.png" alt="image-20220330220517123" srcset="/img/loading.png" data-src="https://img.leienci.site/img/image-20220330220517123.png" class="lozad post-image"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">cp</span> tempfile tempfile.cp <span class="token comment">#复制tempfile并重命名为tempfile.cp</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://img.leienci.site/img/image-20220330220826204.png" alt="image-20220330220826204" srcset="/img/loading.png" data-src="https://img.leienci.site/img/image-20220330220826204.png" class="lozad post-image"></p>
+
   </div>
   <div>
     
@@ -395,29 +368,15 @@ rtt min/avg/max/mdev <span class="token operator">=</span> <span class="token nu
 </article>
 <div class="nav">
   
-    <div class="nav-item-prev">
-      <a 
-        href="/2020/12/20/centos7%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0yum/" 
-        class="nav-link">
-        <i class="iconfont icon-left nav-prev-icon"></i>
-        <div>
-          <div class="nav-label">上一篇</div>
-          
-            <div class="nav-title">CentOS7配置本地yum </div>
-          
-        </div>
-      </a>
-    </div>
-  
   
     <div class="nav-item-next">
       <a 
-        href="/2020/12/19/wordpressss%E8%AE%BE%E7%BD%AEwp-mail-smtp/" 
+        href="/2022/03/19/hello-world/" 
         class="nav-link">
         <div>
           <div class="nav-label">下一篇</div>
           
-            <div class="nav-title">WordPressss设置WP Mail SMTP </div>
+            <div class="nav-title">Hello World </div>
           
         </div>
         <i class="iconfont icon-right nav-next-icon"></i>
