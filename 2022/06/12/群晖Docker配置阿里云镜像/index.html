@@ -18,17 +18,17 @@
   <link 
     rel="icon" 
     href="/img/logo.png">
-  <title>期末小记</title>
+  <title>群晖Docker配置阿里云镜像</title>
   
     
       <meta 
         property="og:title" 
-        content="期末小记">
+        content="群晖Docker配置阿里云镜像">
     
     
       <meta 
         property="og:url" 
-        content="http://example.com/2021/07/16/%E6%9C%9F%E6%9C%AB%E5%B0%8F%E8%AE%B0/index.html">
+        content="http://example.com/2022/06/12/%E7%BE%A4%E6%99%96Docker%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F/index.html">
     
     
       <meta 
@@ -42,14 +42,18 @@
         content="article">
       <meta 
         property="og:article:published_time" 
-        content="2021-07-16">
+        content="2022-06-12">
       <meta 
         property="og:article:modified_time" 
-        content="2022-03-21">
+        content="2022-06-12">
       <meta 
         property="og:article:author" 
         content="Enci Lei">
       
+        
+          <meta 
+            property="og:article:tag" 
+            content="群晖">
         
       
     
@@ -305,43 +309,64 @@
 <article class="card card-content">
   <header>
     <h1 class="post-title">
-      期末小记
+      群晖Docker配置阿里云镜像
     </h1>
   </header>
   <div class="post-meta post-show-meta">
-    <time datetime="2021-07-16T03:32:01.000Z">
+    <time datetime="2022-06-12T04:11:00.000Z">
       <i 
         class="iconfont icon-calendar" 
         style="margin-right: 2px;">
       </i>
-      <span>2021-07-16</span>
+      <span>2022-06-12</span>
     </time>
     
-      <span class="dot"></span>
-      
-        <a 
-          href="/categories/%E6%9D%82%E8%B0%88/" 
-          class="post-meta-link">
-          杂谈
-        </a>
-      
-    
     
       <span class="dot"></span>
-      <span>524 字</span>
+      <span>150 字</span>
     
   </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E7%BE%A4%E6%99%96/" 
+            class="post-meta-link">
+            群晖
+          </a>
+        
+      </div>
+    </div>
   
   </header>
   <div 
     id="section" 
     class="post-content">
-    <p>今天是2021年7月16日，我大一学习生活的最后一天。完成小学期项目答辩后，我坐在机房里等待着下课。距离上次更新博客已经过去一个多月，之前写过几篇碎碎念都没发出来，感觉我博客的风格需要调整一番。</p>
-<p>这一个多月还算过得充实且有趣，投入更多的精力在摄影上。带着相机走了许多的地方，五店市，鼓浪屿，沙坡尾，集美学村。感觉我就是个说走就走的人，总希望在旅途中遇见一些有趣的事。阅读了一些摄影书籍，包括有《极致之美》《照片的本质》《今日摄影》等。《极致之美》主要讲解的是一些风光摄影技术，《照片的本质》是一本精美画册，题材主要是人文摄影，读后感会在后续更新。</p>
-<p>聊一聊我的小学期，小学期主要是《数据结构》这门课的实践。我们有四个项目，项目包括了表，栈，树，图这一些数据结构的基本内容，详情的项目文档我会放在<a target="_blank" rel="noopener" href="https://github.com/leienci/solid-pancake">我的github</a>上。在经过许多天的艰苦debug后，解决了那些让人苦笑不得的bug，还算顺利的通过了项目答辩。</p>
-<p>小学期期间还忙着拍摄《大学生讲思政课》活动，和<a target="_blank" rel="noopener" href="https://sansmall.cn/">舍友</a>一起组队参加的，也是大一最后一次合作了，下一次见到他要等到大三了。我一个承包了两组拍摄和剪辑，对于我来说是个挑战，拍摄前的场地选择，拍摄环境的灯光，拍摄现场的收音，被摄者的状态每个因素都影响着视频的质量，拍摄期间我每天要在拍摄的教室待上9个小时，好在最后视频顺利的做出来了，在我连夜的后期下。</p>
-<p>下课了，写作有点匆忙，后面我会慢慢的修改。</p>
-<p>最后祝我有个充实快乐的暑假。</p>
+    <p>由于Docker官方仓库Docker Hub的服务器在国外，拉取Docker镜像时候速度慢，连接不稳定，经常发生拉取到一半连接中断的情况，配置国内的镜像仓库可以改善问题。</p>
+<ul>
+<li><h2 id="阿里云镜像加速器"><a href="#阿里云镜像加速器" class="headerlink" title="阿里云镜像加速器"></a>阿里云镜像加速器</h2></li>
+</ul>
+<ol>
+<li>注册阿里云账号</li>
+<li>容器镜像服务-镜像工具-镜像加速器</li>
+</ol>
+<p><img src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123358683.png" alt="image-20220612123358683" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123358683.png" class="lozad post-image lozad post-image lozad post-image lozad post-image lozad post-image lozad post-image lozad post-image lozad post-image lozad post-image lozad post-image" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123358683.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123358683.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123358683.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123358683.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123358683.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123358683.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123358683.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123358683.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123358683.png"></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><ul>
+<li><h2 id="群晖Docker启用注册表镜像"><a href="#群晖Docker启用注册表镜像" class="headerlink" title="群晖Docker启用注册表镜像"></a>群晖Docker启用注册表镜像</h2><strong>进入群晖的Docker，左侧点击”注册表“，选择”设置“</strong></li>
+</ul>
+<p><img src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123556304.png" alt="image-20220612123556304" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123556304.png" class="lozad post-image lozad post-image lozad post-image lozad post-image lozad post-image lozad post-image lozad post-image lozad post-image lozad post-image lozad post-image" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123556304.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123556304.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123556304.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123556304.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123556304.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123556304.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123556304.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123556304.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123556304.png"></p>
+<p><strong>选中存储库Docker Hub，然后点击“编辑”</strong></p>
+<p><img src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123642947.png" alt="image-20220612123642947" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123642947.png" class="lozad post-image lozad post-image lozad post-image lozad post-image lozad post-image lozad post-image lozad post-image lozad post-image lozad post-image lozad post-image" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123642947.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123642947.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123642947.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123642947.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123642947.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123642947.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123642947.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123642947.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123642947.png"></p>
+<p><strong>勾选“启用注册表镜像”，粘贴阿里云镜像，点击确认</strong></p>
+<p><img src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123808299.png" alt="image-20220612123808299" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123808299.png" class="lozad post-image lozad post-image lozad post-image lozad post-image lozad post-image lozad post-image lozad post-image lozad post-image lozad post-image lozad post-image" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123808299.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123808299.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123808299.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123808299.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123808299.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123808299.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123808299.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123808299.png" srcset="/img/loading.png" data-src="C:\Users\ENCI\AppData\Roaming\Typora\typora-user-images\image-20220612123808299.png"></p>
 
   </div>
   <div>
@@ -350,29 +375,15 @@
 </article>
 <div class="nav">
   
-    <div class="nav-item-prev">
-      <a 
-        href="/2021/08/29/%E8%AE%B0%E5%BD%95-win10-%E8%93%9D%E5%B1%8F-%E4%BB%A3%E7%A0%81memory-management/" 
-        class="nav-link">
-        <i class="iconfont icon-left nav-prev-icon"></i>
-        <div>
-          <div class="nav-label">上一篇</div>
-          
-            <div class="nav-title">记录 win10 蓝屏 代码MEMORY_MANAGEMENT </div>
-          
-        </div>
-      </a>
-    </div>
-  
   
     <div class="nav-item-next">
       <a 
-        href="/2021/05/24/c%E8%AF%AD%E8%A8%80-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%A0%91%E6%93%8D%E4%BD%9C/" 
+        href="/2022/03/30/CentOS7%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" 
         class="nav-link">
         <div>
           <div class="nav-label">下一篇</div>
           
-            <div class="nav-title">C语言 数据结构 二叉树操作 </div>
+            <div class="nav-title">CentOS7文件系统基本操作 </div>
           
         </div>
         <i class="iconfont icon-right nav-next-icon"></i>
@@ -426,7 +437,7 @@
     style="padding-right: 2px;">
   </i>目录
 </div>
-
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F%E5%99%A8"><span class="toc-text">阿里云镜像加速器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BE%A4%E6%99%96Docker%E5%90%AF%E7%94%A8%E6%B3%A8%E5%86%8C%E8%A1%A8%E9%95%9C%E5%83%8F"><span class="toc-text">群晖Docker启用注册表镜像</span></a></li></ol>
 </div></main>
             <aside class="left-column">
               
@@ -474,7 +485,7 @@
     style="padding-right: 2px;">
   </i>目录
 </div>
-
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F%E5%99%A8"><span class="toc-text">阿里云镜像加速器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BE%A4%E6%99%96Docker%E5%90%AF%E7%94%A8%E6%B3%A8%E5%86%8C%E8%A1%A8%E9%95%9C%E5%83%8F"><span class="toc-text">群晖Docker启用注册表镜像</span></a></li></ol>
       </div>
     </article>
   
@@ -560,7 +571,7 @@
     style="padding-right: 2px;">
   </i>目录
 </div>
-
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F%E5%99%A8"><span class="toc-text">阿里云镜像加速器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BE%A4%E6%99%96Docker%E5%90%AF%E7%94%A8%E6%B3%A8%E5%86%8C%E8%A1%A8%E9%95%9C%E5%83%8F"><span class="toc-text">群晖Docker启用注册表镜像</span></a></li></ol>
     </article>
   
   
