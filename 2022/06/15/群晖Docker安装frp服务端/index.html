@@ -45,7 +45,7 @@
         content="2022-06-15">
       <meta 
         property="og:article:modified_time" 
-        content="2022-06-15">
+        content="2022-06-16">
       <meta 
         property="og:article:author" 
         content="Enci Lei">
@@ -323,7 +323,7 @@
     
     
       <span class="dot"></span>
-      <span>279 字</span>
+      <span>287 字</span>
     
   </div>
   
@@ -352,12 +352,15 @@
     class="post-content">
     <p><a target="_blank" rel="noopener" href="https://github.com/fatedier/frp">frp</a> 是一个专注于内网穿透的高性能的反向代理应用，支持 TCP、UDP、HTTP、HTTPS 等多种协议。可以将内网服务以安全、便捷的方式通过具有公网 IP 节点的中转暴露到公网。</p>
 <h2 id="配置Docker容器"><a href="#配置Docker容器" class="headerlink" title="配置Docker容器"></a>配置Docker容器</h2><ul>
-<li>下载最新版本的frp映像</li>
+<li>下载最0.43.0版本的frp映像</li>
 </ul>
 <p><img src="https://img.leienci.site/img/image-20220615160424884.png" alt="image-20220615160424884" srcset="/img/loading.png" data-src="https://img.leienci.site/img/image-20220615160424884.png" class="lozad post-image"></p>
 <ul>
-<li><p>查看映像的说明文档：<a target="_blank" rel="noopener" href="https://registry.hub.docker.com/r/snowdreamtech/frps/">https://registry.hub.docker.com/r/snowdreamtech/frps/</a></p>
-<p>容器的使用方法：<code>docker run  --network host -d -v /etc/frp/frps.ini:/etc/frp/frps.ini --name frps snowdreamtech/frps</code></p>
+<li><p>查看容器的说明文档：</p>
+<p><a target="_blank" rel="noopener" href="https://registry.hub.docker.com/r/snowdreamtech/frps/">https://registry.hub.docker.com/r/snowdreamtech/frps/</a></p>
+</li>
+<li><p>容器的使用方法：</p>
+<pre class="line-numbers language-none"><code class="language-none">docker run  --network host -d -v &#x2F;etc&#x2F;frp&#x2F;frps.ini:&#x2F;etc&#x2F;frp&#x2F;frps.ini --name frps snowdreamtech&#x2F;frps<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p>创建docker容器</p>
 <p><img src="https://img.leienci.site/img/image-20220615161051979.png" alt="image-20220615161051979" srcset="/img/loading.png" data-src="https://img.leienci.site/img/image-20220615161051979.png" class="lozad post-image"></p>
@@ -403,7 +406,7 @@
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
-<li><p>可以访问登录模板即配置成功</p>
+<li><p>可以访问登录面板即配置成功</p>
 <p><img src="https://img.leienci.site/img/image-20220615164526947.png" alt="image-20220615164526947" srcset="/img/loading.png" data-src="https://img.leienci.site/img/image-20220615164526947.png" class="lozad post-image"></p>
 </li>
 </ul>
