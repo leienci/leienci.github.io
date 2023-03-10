@@ -18,17 +18,17 @@
   <link 
     rel="icon" 
     href="/img/logo.png">
-  <title>WordPress配置Apache强制http跳转至https</title>
+  <title>Hexo(1)为Hexo博客生成站点地图(Sitemap)</title>
   
     
       <meta 
         property="og:title" 
-        content="WordPress配置Apache强制http跳转至https">
+        content="Hexo(1)为Hexo博客生成站点地图(Sitemap)">
     
     
       <meta 
         property="og:url" 
-        content="https://blog.leienci.site/2020/12/17/wordpressapache%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%BC%BA%E5%88%B6http%E8%B7%B3%E8%BD%AC%E8%87%B3https/index.html">
+        content="https://blog.leienci.site/2023/03/10/Hexo(1)%E4%B8%BAHexo%E5%8D%9A%E5%AE%A2%E7%94%9F%E6%88%90%E7%AB%99%E7%82%B9%E5%9C%B0%E5%9B%BE(Sitemap)/index.html">
     
     
       <meta 
@@ -42,14 +42,18 @@
         content="article">
       <meta 
         property="og:article:published_time" 
-        content="2020-12-17">
+        content="2023-03-10">
       <meta 
         property="og:article:modified_time" 
-        content="2022-03-21">
+        content="2023-03-10">
       <meta 
         property="og:article:author" 
         content="Enci Lei">
       
+        
+          <meta 
+            property="og:article:tag" 
+            content="Hexo">
         
       
     
@@ -297,77 +301,74 @@
 <article class="card card-content">
   <header>
     <h1 class="post-title">
-      WordPress配置Apache强制http跳转至https
+      Hexo(1)为Hexo博客生成站点地图(Sitemap)
     </h1>
   </header>
   <div class="post-meta post-show-meta">
-    <time datetime="2020-12-17T04:53:06.000Z">
+    <time datetime="2023-03-10T05:51:37.000Z">
       <i 
         class="iconfont icon-calendar" 
         style="margin-right: 2px;">
       </i>
-      <span>2020-12-17</span>
+      <span>2023-03-10</span>
     </time>
     
       <span class="dot"></span>
       
         <a 
-          href="/categories/WordPress/" 
+          href="/categories/MyHexo/" 
           class="post-meta-link">
-          WordPress
+          MyHexo
         </a>
       
     
     
       <span class="dot"></span>
-      <span>214 字</span>
+      <span>240 字</span>
     
   </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/Hexo/" 
+            class="post-meta-link">
+            Hexo
+          </a>
+        
+      </div>
+    </div>
   
   </header>
   <div 
     id="section" 
     class="post-content">
-    <ul>
-<li>修改网站根目录下的.htaccess文件（修改前先建立一个备份）</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ /home/www/htdocs <span class="token comment"># .htaccess的路径</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+    <p>Hi！使用Hexo来写博客已经一年了。Hexo拥有清晰的页面结构，纯静态界面。我博客的代码托管在Github上，管理起来非常的便利。<br>决定为博客添加上站点地图，让更多的朋友可以通过搜索引擎访问到我的博客。</p>
+<h4 id="Hexo安装Sitemap"><a href="#Hexo安装Sitemap" class="headerlink" title="Hexo安装Sitemap"></a>Hexo安装Sitemap</h4><h5 id="安装GoogleSitemap"><a href="#安装GoogleSitemap" class="headerlink" title="安装GoogleSitemap"></a>安装GoogleSitemap</h5><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-sitemap --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p> .htaccess为隐藏文件</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">ls</span> -a <span class="token comment">#显示当前目录下的所有文件及文件夹</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h5 id="安装百度Sitemap"><a href="#安装百度Sitemap" class="headerlink" title="安装百度Sitemap"></a>安装百度Sitemap</h5><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-baidu-sitemap --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<ul>
-<li>在文件末尾添加以下代码即可</li>
-</ul>
-<pre class="line-numbers language-htaccess" data-language="htaccess"><code class="language-htaccess">RewriteEngine on  #开启重定向       
-RewriteBase &#x2F;             
-RewriteCond %&#123;SERVER_PORT&#125; !^443$
-RewriteRule ^.*$ https:&#x2F;&#x2F;%&#123;SERVER_NAME&#125;%&#123;REQUEST_URI&#125; [L,R]   
-#填写你的域名<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="Hexo配置Sitemap"><a href="#Hexo配置Sitemap" class="headerlink" title="Hexo配置Sitemap"></a>Hexo配置Sitemap</h4><p>安装结束后，在<code>_config.yml</code>中找到<code>url:</code>，改成你自己的域名</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># URL</span>
+<span class="token comment">## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'</span>
+<span class="token key atrule">url</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span>//example.com
+<span class="token key atrule">permalink</span><span class="token punctuation">:</span> <span class="token punctuation">:</span>year/<span class="token punctuation">:</span>month/<span class="token punctuation">:</span>day/<span class="token punctuation">:</span>title/
+<span class="token key atrule">permalink_defaults</span><span class="token punctuation">:</span>
+<span class="token key atrule">pretty_urls</span><span class="token punctuation">:</span>
+<span class="token key atrule">trailing_index</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># Set to false to remove trailing 'index.html' from permalinks</span>
+<span class="token key atrule">trailing_html</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># Set to false to remove trailing '.html' from permalinks</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<ul>
-<li>Example</li>
-</ul>
-<pre class="line-numbers language-htaccess" data-language="htaccess"><code class="language-htaccess"># BEGIN WordPress
-# 在“BEGIN WordPress”与“END WordPress”之间的指令（行）是
-# 动态生成的，只应被WordPress过滤器修改。
-# 任何对标记之间的指令的修改都会被覆盖。
-&lt;IfModule mod_rewrite.c&gt;
-RewriteEngine On
-RewriteRule .* - [E&#x3D;HTTP_AUTHORIZATION:%&#123;HTTP:Authorization&#125;]
-RewriteBase &#x2F;
-RewriteRule ^index\.php$ - [L]
-RewriteCond %&#123;REQUEST_FILENAME&#125; !-f
-RewriteCond %&#123;REQUEST_FILENAME&#125; !-d
-RewriteRule . &#x2F;index.php [L]
-&lt;&#x2F;IfModule&gt;
+<h4 id="验证站点配置"><a href="#验证站点配置" class="headerlink" title="验证站点配置"></a>验证站点配置</h4><p>将页面提交到服务器后，通过<code>域名/sitemap.xml</code>或者<code>域名/baidusitemap.xml</code>可以进行访问sitemap</p>
+<p>在谷歌和百度的站长工具上提交我们sitemap，搜索引擎就会收录博客。</p>
 
-# END WordPress<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-htaccess" data-language="htaccess"><code class="language-htaccess"># 设置https跳转
-RewriteEngine on          
-RewriteBase &#x2F;             
-RewriteCond %&#123;SERVER_PORT&#125; !^443$    
-RewriteRule ^.*$ https:&#x2F;&#x2F;%&#123;SERVER_NAME&#125;%&#123;REQUEST_URI&#125; [L,R]  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
   </div>
   <div>
     
@@ -377,13 +378,13 @@ RewriteRule ^.*$ https:&#x2F;&#x2F;%&#123;SERVER_NAME&#125;%&#123;REQUEST_URI&#1
   
     <div class="nav-item-prev">
       <a 
-        href="/2020/12/18/wordpress%E6%B7%BB%E5%8A%A0icp%E5%A4%87%E6%A1%88%E5%8F%B7%E5%92%8C%E5%8F%8B%E9%93%BE/" 
+        href="/2023/03/10/Hexo(2)%E4%BD%BF%E7%94%A8hexo-abbrlink%E4%B8%BA%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E6%B0%B8%E4%B9%85%E9%93%BE%E6%8E%A5/" 
         class="nav-link">
         <i class="iconfont icon-left nav-prev-icon"></i>
         <div>
           <div class="nav-label">上一篇</div>
           
-            <div class="nav-title">WordPress添加ICP备案号和友链 </div>
+            <div class="nav-title">Hexo(2)使用hexo-abbrlink为博客创建永久链接 </div>
           
         </div>
       </a>
@@ -392,12 +393,12 @@ RewriteRule ^.*$ https:&#x2F;&#x2F;%&#123;SERVER_NAME&#125;%&#123;REQUEST_URI&#1
   
     <div class="nav-item-next">
       <a 
-        href="/2020/12/05/helloworld%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E3%80%82/" 
+        href="/2022/11/17/Selenium%E8%87%AA%E5%8A%A8%E5%8C%96%EF%BC%881%EF%BC%89Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" 
         class="nav-link">
         <div>
           <div class="nav-label">下一篇</div>
           
-            <div class="nav-title">Hello,world!个人博客的第一篇文章。 </div>
+            <div class="nav-title">Selenium自动化（1）Python开发环境配置 </div>
           
         </div>
         <i class="iconfont icon-right nav-next-icon"></i>
@@ -451,7 +452,7 @@ RewriteRule ^.*$ https:&#x2F;&#x2F;%&#123;SERVER_NAME&#125;%&#123;REQUEST_URI&#1
     style="padding-right: 2px;">
   </i>目录
 </div>
-
+<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Hexo%E5%AE%89%E8%A3%85Sitemap"><span class="toc-text">Hexo安装Sitemap</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%89%E8%A3%85GoogleSitemap"><span class="toc-text">安装GoogleSitemap</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E7%99%BE%E5%BA%A6Sitemap"><span class="toc-text">安装百度Sitemap</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Hexo%E9%85%8D%E7%BD%AESitemap"><span class="toc-text">Hexo配置Sitemap</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE"><span class="toc-text">验证站点配置</span></a></li></ol>
 </div></main>
             <aside class="left-column">
               
@@ -499,7 +500,7 @@ RewriteRule ^.*$ https:&#x2F;&#x2F;%&#123;SERVER_NAME&#125;%&#123;REQUEST_URI&#1
     style="padding-right: 2px;">
   </i>目录
 </div>
-
+<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Hexo%E5%AE%89%E8%A3%85Sitemap"><span class="toc-text">Hexo安装Sitemap</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%89%E8%A3%85GoogleSitemap"><span class="toc-text">安装GoogleSitemap</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E7%99%BE%E5%BA%A6Sitemap"><span class="toc-text">安装百度Sitemap</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Hexo%E9%85%8D%E7%BD%AESitemap"><span class="toc-text">Hexo配置Sitemap</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE"><span class="toc-text">验证站点配置</span></a></li></ol>
       </div>
     </article>
   
@@ -598,7 +599,7 @@ RewriteRule ^.*$ https:&#x2F;&#x2F;%&#123;SERVER_NAME&#125;%&#123;REQUEST_URI&#1
     style="padding-right: 2px;">
   </i>目录
 </div>
-
+<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Hexo%E5%AE%89%E8%A3%85Sitemap"><span class="toc-text">Hexo安装Sitemap</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%89%E8%A3%85GoogleSitemap"><span class="toc-text">安装GoogleSitemap</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E7%99%BE%E5%BA%A6Sitemap"><span class="toc-text">安装百度Sitemap</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Hexo%E9%85%8D%E7%BD%AESitemap"><span class="toc-text">Hexo配置Sitemap</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE"><span class="toc-text">验证站点配置</span></a></li></ol>
     </article>
   
   
