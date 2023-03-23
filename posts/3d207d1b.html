@@ -18,17 +18,17 @@
   <link 
     rel="icon" 
     href="/img/logo.png">
-  <title>WordPress配置Apache强制http跳转至https</title>
+  <title>编译OpenWrt/Lede软路由固件</title>
   
     
       <meta 
         property="og:title" 
-        content="WordPress配置Apache强制http跳转至https">
+        content="编译OpenWrt/Lede软路由固件">
     
     
       <meta 
         property="og:url" 
-        content="https://blog.leienci.site/posts/71f4bfde.html">
+        content="https://blog.leienci.site/posts/3d207d1b.html">
     
     
       <meta 
@@ -42,10 +42,10 @@
         content="article">
       <meta 
         property="og:article:published_time" 
-        content="2020-12-17">
+        content="2023-03-22">
       <meta 
         property="og:article:modified_time" 
-        content="2023-03-10">
+        content="2023-03-23">
       <meta 
         property="og:article:author" 
         content="Enci Lei">
@@ -297,30 +297,30 @@
 <article class="card card-content">
   <header>
     <h1 class="post-title">
-      WordPress配置Apache强制http跳转至https
+      编译OpenWrt/Lede软路由固件
     </h1>
   </header>
   <div class="post-meta post-show-meta">
-    <time datetime="2020-12-17T04:53:06.000Z">
+    <time datetime="2023-03-22T13:59:37.000Z">
       <i 
         class="iconfont icon-calendar" 
         style="margin-right: 2px;">
       </i>
-      <span>2020-12-17</span>
+      <span>2023-03-22</span>
     </time>
     
       <span class="dot"></span>
       
         <a 
-          href="/categories/WordPress/" 
+          href="/categories/Linux/" 
           class="post-meta-link">
-          WordPress
+          Linux
         </a>
       
     
     
       <span class="dot"></span>
-      <span>214 字</span>
+      <span>713 字</span>
     
   </div>
   
@@ -328,46 +328,112 @@
   <div 
     id="section" 
     class="post-content">
-    <ul>
-<li>修改网站根目录下的.htaccess文件（修改前先建立一个备份）</li>
+    <p><a target="_blank" rel="noopener" href="https://github.com/coolsnowwolf/lede">LEDE</a>是基于<code>OpenWrt</code>的Linux开源路由系统，集成了更多的功能。</p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
+<li><strong>不要用 root 用户进行编译</strong></li>
+<li><strong>也不能使用<code>sudo</code>来进行编译！！！</strong></li>
+<li>国内用户编译前最好准备好梯子</li>
+<li>默认登陆IP <code>192.168.1.1</code> 密码 <code>password</code></li>
 </ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ /home/www/htdocs <span class="token comment"># .htaccess的路径</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p> .htaccess为隐藏文件</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">ls</span> -a <span class="token comment">#显示当前目录下的所有文件及文件夹</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="编译命令"><a href="#编译命令" class="headerlink" title="编译命令"></a>编译命令</h2><ul>
+<li>首先装好 Linux 系统，推荐 Debian 11 或 Ubuntu LTS（我使用的是Debian 11）</li>
+<li>安装编译依赖</li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> update -y
+<span class="token function">sudo</span> <span class="token function">apt</span> full-upgrade -y
+<span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> -y ack antlr3 aria2 asciidoc autoconf automake autopoint binutils bison build-essential <span class="token punctuation">\</span>
+<span class="token function">bzip2</span> ccache cmake cpio <span class="token function">curl</span> device-tree-compiler fastjar flex <span class="token function">gawk</span> gettext gcc-multilib g++-multilib <span class="token punctuation">\</span>
+<span class="token function">git</span> gperf haveged help2man intltool libc6-dev-i386 libelf-dev libglib2.0-dev libgmp3-dev libltdl-dev <span class="token punctuation">\</span>
+libmpc-dev libmpfr-dev libncurses5-dev libncursesw5-dev libreadline-dev libssl-dev libtool lrzsz <span class="token punctuation">\</span>
+<span class="token function">mkisofs</span> msmtp <span class="token function">nano</span> ninja-build p7zip p7zip-full patch pkgconf python2.7 python3 python3-pip libpython3-dev qemu-utils <span class="token punctuation">\</span>
+<span class="token function">rsync</span> scons squashfs-tools subversion swig texinfo uglifyjs upx-ucl <span class="token function">unzip</span> <span class="token function">vim</span> <span class="token function">wget</span> xmlto xxd zlib1g-dev<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
-<li>在文件末尾添加以下代码即可</li>
+<li>更换国内镜像源依赖安装更快</li>
 </ul>
-<pre class="line-numbers language-htaccess" data-language="htaccess"><code class="language-htaccess">RewriteEngine on  #开启重定向       
-RewriteBase &#x2F;             
-RewriteCond %&#123;SERVER_PORT&#125; !^443$
-RewriteRule ^.*$ https:&#x2F;&#x2F;%&#123;SERVER_NAME&#125;%&#123;REQUEST_URI&#125; [L,R]   
-#填写你的域名<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#备份自带的软件源</span>
+<span class="token function">mv</span> /etc/apt/sources.list /etc/apt/sources.list.bak
+<span class="token comment">#新建软件源文件</span>
+<span class="token function">nano</span> /etc/apt/sources.list
+<span class="token comment">#添加以下内容（阿里云镜像源）	</span>
+deb https://mirrors.aliyun.com/debian/ bullseye main non-free contrib
+deb-src https://mirrors.aliyun.com/debian/ bullseye main non-free contrib
+deb https://mirrors.aliyun.com/debian-security/ bullseye-security main
+deb-src https://mirrors.aliyun.com/debian-security/ bullseye-security main
+deb https://mirrors.aliyun.com/debian/ bullseye-updates main non-free contrib
+deb-src https://mirrors.aliyun.com/debian/ bullseye-updates main non-free contrib
+deb https://mirrors.aliyun.com/debian/ bullseye-backports main non-free contrib
+deb-src https://mirrors.aliyun.com/debian/ bullseye-backports main non-free contrib
+<span class="token comment">#更新一下软件仓库</span>
+<span class="token function">apt-get</span> update<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
-<li>Example</li>
+<li>下载源代码，更新 feeds 并选择配置（在LEDE目录下输入命令）</li>
 </ul>
-<pre class="line-numbers language-htaccess" data-language="htaccess"><code class="language-htaccess"># BEGIN WordPress
-# 在“BEGIN WordPress”与“END WordPress”之间的指令（行）是
-# 动态生成的，只应被WordPress过滤器修改。
-# 任何对标记之间的指令的修改都会被覆盖。
-&lt;IfModule mod_rewrite.c&gt;
-RewriteEngine On
-RewriteRule .* - [E&#x3D;HTTP_AUTHORIZATION:%&#123;HTTP:Authorization&#125;]
-RewriteBase &#x2F;
-RewriteRule ^index\.php$ - [L]
-RewriteCond %&#123;REQUEST_FILENAME&#125; !-f
-RewriteCond %&#123;REQUEST_FILENAME&#125; !-d
-RewriteRule . &#x2F;index.php [L]
-&lt;&#x2F;IfModule&gt;
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/coolsnowwolf/lede
+<span class="token builtin class-name">cd</span> lede
+./scripts/feeds update -a
+./scripts/feeds <span class="token function">install</span> -a
+<span class="token function">make</span> menuconfig<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-# END WordPress<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-htaccess" data-language="htaccess"><code class="language-htaccess"># 设置https跳转
-RewriteEngine on          
-RewriteBase &#x2F;             
-RewriteCond %&#123;SERVER_PORT&#125; !^443$    
-RewriteRule ^.*$ https:&#x2F;&#x2F;%&#123;SERVER_NAME&#125;%&#123;REQUEST_URI&#125; [L,R]  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>下载 dl 库，编译固件 （-j 后面是线程数，第一次编译推荐用单线程）</li>
+<li>该报错还是会报错，报错了再使用单线程排除故障</li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">make</span> download -j8
+<span class="token function">make</span> <span class="token assign-left variable">V</span><span class="token operator">=</span>s -j1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="如果需要重新配置"><a href="#如果需要重新配置" class="headerlink" title="如果需要重新配置"></a>如果需要重新配置</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#删除配置文件</span>
+<span class="token function">rm</span> -rf ./tmp <span class="token operator">&amp;&amp;</span> <span class="token function">rm</span> -rf .config
+<span class="token function">make</span> menuconfig
+<span class="token function">make</span> <span class="token assign-left variable">V</span><span class="token operator">=</span>s -j<span class="token variable"><span class="token variable">$(</span>nproc<span class="token variable">)</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#仅清理编译结果（bin目录）</span>
+<span class="token function">make</span> clean
+<span class="token comment">#清理所有编译文件（除了.config、dl文件夹和feeds以外都清理）</span>
+<span class="token function">make</span> dirclean
+<span class="token comment">#清理所有编译文件以及相关依赖（完全清理干净，一键回到刚git clone下来的时候）</span>
+<span class="token function">make</span> distclean<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="编译固件报错处理"><a href="#编译固件报错处理" class="headerlink" title="编译固件报错处理"></a>编译固件报错处理</h2><ul>
+<li>使用普通用户权限编译提示错误</li>
+</ul>
+<p><img src="https://img.leienci.site/img/image-20230323200141666.png" alt="image-20230323200141666" srcset="/img/loading.png" data-src="https://img.leienci.site/img/image-20230323200141666.png" class="lozad post-image"></p>
+<ul>
+<li>使用root权限编译提示<code>you should not run configure as root</code></li>
+</ul>
+<p><img src="https://img.leienci.site/img/cce4cb51baa9497c4340a272430ec7a.png" alt="cce4cb51baa9497c4340a272430ec7a" srcset="/img/loading.png" data-src="https://img.leienci.site/img/cce4cb51baa9497c4340a272430ec7a.png" class="lozad post-image"></p>
+<ul>
+<li>修改文件（夹）的拥有者为当前用户解决报错</li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> ./lede/
+<span class="token function">sudo</span> <span class="token function">chown</span> -R <span class="token environment constant">$USER</span> lede<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="集成mentohust锐捷认证插件"><a href="#集成mentohust锐捷认证插件" class="headerlink" title="集成mentohust锐捷认证插件"></a>集成<code>mentohust</code>锐捷认证插件</h2><ul>
+<li>更新feeds</li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ ./scripts/feeds update -a
+$ ./scripts/feeds <span class="token function">install</span> libpcap<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<ul>
+<li>克隆代码</li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># clone代码至package/路径下</span>
+$ <span class="token function">git</span> clone https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk.git package/mentohust
+$ <span class="token function">make</span> menuconfig
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>主菜单中找到<code>Network</code>，回车进入，然后找到<code>mentohust</code></li>
+</ul>
+<p><img src="https://img.leienci.site/img/image-20230323201735543.png" alt="image-20230323201735543" srcset="/img/loading.png" data-src="https://img.leienci.site/img/image-20230323201735543.png" class="lozad post-image"></p>
+<ul>
+<li>保存退出后编译固件</li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#编译固件</span>
+<span class="token function">make</span> <span class="token assign-left variable">V</span><span class="token operator">=</span>s
+<span class="token comment">#编译完成后在固件内的路径</span>
+/usr/sbin/mentohust<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
   </div>
   <div>
     
@@ -375,29 +441,15 @@ RewriteRule ^.*$ https:&#x2F;&#x2F;%&#123;SERVER_NAME&#125;%&#123;REQUEST_URI&#1
 </article>
 <div class="nav">
   
-    <div class="nav-item-prev">
-      <a 
-        href="/posts/83d1e521.html" 
-        class="nav-link">
-        <i class="iconfont icon-left nav-prev-icon"></i>
-        <div>
-          <div class="nav-label">上一篇</div>
-          
-            <div class="nav-title">WordPress添加ICP备案号和友链 </div>
-          
-        </div>
-      </a>
-    </div>
-  
   
     <div class="nav-item-next">
       <a 
-        href="/posts/102fdd11.html" 
+        href="/posts/43cd3f82.html" 
         class="nav-link">
         <div>
           <div class="nav-label">下一篇</div>
           
-            <div class="nav-title">Hello,world!个人博客的第一篇文章。 </div>
+            <div class="nav-title">Hexo(2)使用hexo-abbrlink为博客创建永久链接 </div>
           
         </div>
         <i class="iconfont icon-right nav-next-icon"></i>
@@ -451,7 +503,7 @@ RewriteRule ^.*$ https:&#x2F;&#x2F;%&#123;SERVER_NAME&#125;%&#123;REQUEST_URI&#1
     style="padding-right: 2px;">
   </i>目录
 </div>
-
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F"><span class="toc-text">注意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E5%91%BD%E4%BB%A4"><span class="toc-text">编译命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E9%9C%80%E8%A6%81%E9%87%8D%E6%96%B0%E9%85%8D%E7%BD%AE"><span class="toc-text">如果需要重新配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E5%9B%BA%E4%BB%B6%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86"><span class="toc-text">编译固件报错处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%86%E6%88%90mentohust%E9%94%90%E6%8D%B7%E8%AE%A4%E8%AF%81%E6%8F%92%E4%BB%B6"><span class="toc-text">集成mentohust锐捷认证插件</span></a></li></ol>
 </div></main>
             <aside class="left-column">
               
@@ -499,7 +551,7 @@ RewriteRule ^.*$ https:&#x2F;&#x2F;%&#123;SERVER_NAME&#125;%&#123;REQUEST_URI&#1
     style="padding-right: 2px;">
   </i>目录
 </div>
-
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F"><span class="toc-text">注意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E5%91%BD%E4%BB%A4"><span class="toc-text">编译命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E9%9C%80%E8%A6%81%E9%87%8D%E6%96%B0%E9%85%8D%E7%BD%AE"><span class="toc-text">如果需要重新配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E5%9B%BA%E4%BB%B6%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86"><span class="toc-text">编译固件报错处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%86%E6%88%90mentohust%E9%94%90%E6%8D%B7%E8%AE%A4%E8%AF%81%E6%8F%92%E4%BB%B6"><span class="toc-text">集成mentohust锐捷认证插件</span></a></li></ol>
       </div>
     </article>
   
@@ -598,7 +650,7 @@ RewriteRule ^.*$ https:&#x2F;&#x2F;%&#123;SERVER_NAME&#125;%&#123;REQUEST_URI&#1
     style="padding-right: 2px;">
   </i>目录
 </div>
-
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F"><span class="toc-text">注意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E5%91%BD%E4%BB%A4"><span class="toc-text">编译命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E9%9C%80%E8%A6%81%E9%87%8D%E6%96%B0%E9%85%8D%E7%BD%AE"><span class="toc-text">如果需要重新配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E5%9B%BA%E4%BB%B6%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86"><span class="toc-text">编译固件报错处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%86%E6%88%90mentohust%E9%94%90%E6%8D%B7%E8%AE%A4%E8%AF%81%E6%8F%92%E4%BB%B6"><span class="toc-text">集成mentohust锐捷认证插件</span></a></li></ol>
     </article>
   
   
