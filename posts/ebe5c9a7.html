@@ -18,17 +18,17 @@
   <link 
     rel="icon" 
     href="/img/logo.png">
-  <title>WordPress添加ICP备案号和友链</title>
+  <title>eNSP实验 动态路由OSPF</title>
   
     
       <meta 
         property="og:title" 
-        content="WordPress添加ICP备案号和友链">
+        content="eNSP实验 动态路由OSPF">
     
     
       <meta 
         property="og:url" 
-        content="https://blog.leienci.site/posts/83d1e521.html">
+        content="https://blog.leienci.site/posts/ebe5c9a7.html">
     
     
       <meta 
@@ -42,10 +42,10 @@
         content="article">
       <meta 
         property="og:article:published_time" 
-        content="2020-12-18">
+        content="2024-09-18">
       <meta 
         property="og:article:modified_time" 
-        content="2023-03-10">
+        content="2024-09-18">
       <meta 
         property="og:article:author" 
         content="Enci Lei">
@@ -297,30 +297,21 @@
 <article class="card card-content">
   <header>
     <h1 class="post-title">
-      WordPress添加ICP备案号和友链
+      eNSP实验 动态路由OSPF
     </h1>
   </header>
   <div class="post-meta post-show-meta">
-    <time datetime="2020-12-18T00:41:24.000Z">
+    <time datetime="2024-09-18T00:23:36.000Z">
       <i 
         class="iconfont icon-calendar" 
         style="margin-right: 2px;">
       </i>
-      <span>2020-12-18</span>
+      <span>2024-09-18</span>
     </time>
     
-      <span class="dot"></span>
-      
-        <a 
-          href="/categories/WordPress/" 
-          class="post-meta-link">
-          WordPress
-        </a>
-      
-    
     
       <span class="dot"></span>
-      <span>63 字</span>
+      <span>259 字</span>
     
   </div>
   
@@ -328,13 +319,41 @@
   <div 
     id="section" 
     class="post-content">
-    <p>在外观-主题编辑器-主题文件(footer.php)中设置</p>
-<p><code>在 &lt;div&gt; 内添加HTML &lt;a&gt; 标签</code></p>
-<p><img src="https://img.leienci.site/img_old/image-1-1536x661.png" alt="img" srcset="/img/loading.png" data-src="https://img.leienci.site/img_old/image-1-1536x661.png" class="lozad post-image"></p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.pointdomain<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
-<span class="token comment">&lt;!-- 指向的域名 超链接的名字 --></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+    <p>OSPF(Open Shortest Path First)，开放最短路径优先协议</p>
+<p>  <img src="https://img.leienci.site/img/image-20240918082434092.png" alt="image-20240918082434092" srcset="/img/loading.png" data-src="https://img.leienci.site/img/image-20240918082434092.png" class="lozad post-image"></p>
+<ul>
+<li>R1配置</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">&lt;Huawei&gt;system-view 
+[Huawei]sysname R1 
+[R1]int g 0&#x2F;0&#x2F;0 
+[R1-GigabitEthernet0&#x2F;0&#x2F;0]ip add 192.168.1.254 24 
+[R1-GigabitEthernet0&#x2F;0&#x2F;0]int g 0&#x2F;0&#x2F;1 
+[R1-GigabitEthernet0&#x2F;0&#x2F;1]ip add 10.0.0.1 24 
+[R1]ospf [R1-ospf-1]area 0 
+[R1-ospf-1-area-0.0.0.0]network 192.168.1.0 0.0.0.255 
+[R1-ospf-1-area-0.0.0.0]network 10.0.0.0 0.0.0.255 
+&lt;R1&gt;save
+	The current configuration will be written to the device.   
+	Are you sure to continue? (y&#x2F;n)[n]:y<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>参考博客：<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/tags/tag_a.asp">https://www.w3school.com.cn/tags/tag_a.asp</a></p>
+<ul>
+<li>R2配置</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">&lt;Huawei&gt;system-view      
+[Huawei]sysname R2 
+[R2]int g 0&#x2F;0&#x2F;1 
+[R2-GigabitEthernet0&#x2F;0&#x2F;1]ip add 10.0.0.2 24 
+[R2-GigabitEthernet0&#x2F;0&#x2F;1]int g 0&#x2F;0&#x2F;0  
+[R2-GigabitEthernet0&#x2F;0&#x2F;0]ip add 192.168.2.254 24 
+[R2]ospf  
+[R2-ospf-1]area 0 
+[R2-ospf-1-area-0.0.0.0]network 192.168.2.0 0.0.0.255 
+[R2-ospf-1-area-0.0.0.0]network 10.0.0.0 0.0.0.255 
+&lt;R2&gt;save   
+	The current configuration will be written to the device.   
+	Are you sure to continue? (y&#x2F;n)[n]:y<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
   </div>
   <div>
@@ -343,29 +362,15 @@
 </article>
 <div class="nav">
   
-    <div class="nav-item-prev">
-      <a 
-        href="/posts/8305006f.html" 
-        class="nav-link">
-        <i class="iconfont icon-left nav-prev-icon"></i>
-        <div>
-          <div class="nav-label">上一篇</div>
-          
-            <div class="nav-title">WordPressss设置WP Mail SMTP </div>
-          
-        </div>
-      </a>
-    </div>
-  
   
     <div class="nav-item-next">
       <a 
-        href="/posts/71f4bfde.html" 
+        href="/posts/c9e89aab.html" 
         class="nav-link">
         <div>
           <div class="nav-label">下一篇</div>
           
-            <div class="nav-title">WordPress配置Apache强制http跳转至https </div>
+            <div class="nav-title">当前用户添加到docker组 </div>
           
         </div>
         <i class="iconfont icon-right nav-next-icon"></i>
@@ -525,15 +530,9 @@
   <div class="tags-list">
     
       <a 
-        href="/tags/Hexo/" 
-        title="Hexo">
-        <div class="tags-list-item">Hexo</div>
-      </a>
-    
-      <a 
-        href="/tags/%E7%BE%A4%E6%99%96/" 
-        title="群晖">
-        <div class="tags-list-item">群晖</div>
+        href="/tags/3D%E6%89%93%E5%8D%B0/" 
+        title="3D打印">
+        <div class="tags-list-item">3D打印</div>
       </a>
     
       <a 
@@ -543,9 +542,15 @@
       </a>
     
       <a 
-        href="/tags/3D%E6%89%93%E5%8D%B0/" 
-        title="3D打印">
-        <div class="tags-list-item">3D打印</div>
+        href="/tags/Hexo/" 
+        title="Hexo">
+        <div class="tags-list-item">Hexo</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%BE%A4%E6%99%96/" 
+        title="群晖">
+        <div class="tags-list-item">群晖</div>
       </a>
     
   </div>
